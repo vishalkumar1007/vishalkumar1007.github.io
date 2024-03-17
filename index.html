@@ -1,0 +1,1553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- .............. linkedin meta tag ...............  -->
+    <meta name="keywords" content="software engineer , portfolio , vishalkumar1007 ,full stack developer">
+    <meta name="title" property="og:title" content="Vishal kumar portfolio">
+    <meta property="og:type" content="Website">
+    <meta name="image" property="og:image" content="./img/metatag_image.png">
+    <meta name="description" property="og:description" content="i am software developer this is my portfolio here you know me well.">
+    <meta name="author" content="Vishal kumar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- .............. linkedin meta tag ^ ...............  -->
+    
+    <title>Vishal Portfolio</title>
+    <link rel="stylesheet" href="./index_dark.css">
+    <link id="lightMode" rel="stylesheet" href="./index.light.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+</head>
+
+<body id="bdy">
+    <header>
+        <div class="nav">
+            <div class="feture">
+                <div class="logo_con sticky">
+                    <div class="logo">
+                        <span id="heading_lineargradient">Vishal</span>
+                    </div>
+                </div>
+
+                <div class="nav_cen">
+                    <ul class="links">
+                        <li><a href="#Home">Home</a></li>
+                        <li id="about"><a href="#About">About</a></li>
+                        <li><a href="#profiles">Profile</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="darkmode">
+                    <input type="checkbox" id="darkmode-toggle" />
+                    <label for="darkmode-toggle" id="darkmode_lable" onclick="upComingFeatureAlert()">
+                </div>
+                <div class="toggle_btn">
+                    <span id="open_bar"><svg id="open_bar" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu">
+                            <line x1="4" x2="20" y1="12" y2="12" />
+                            <line x1="4" x2="20" y1="6" y2="6" />
+                            <line x1="4" x2="20" y1="18" y2="18" />
+                        </svg></span>
+                    <span id="close_bar"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+                            <path d="M18 6 6 18" />
+                            <path d="m6 6 12 12" />
+                        </svg></span>
+                </div>
+            </div>
+        </div>
+        <div class="toggle_nav">
+            <ul id="toggle_nav_close" class="links">
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#About">About</a></li>
+                <li><a href="#profiles">Profile</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div id="Home" class="content">
+            <div class="home">
+                <div class="left_home">
+                    <div class="line_icon_1"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11"
+                            viewBox="0 0 25 25" fill="none" stroke="#4e4e4e" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" class="lucide lucide-circle">
+                            <circle cx="12" cy="12" r="10" />
+                        </svg></div>
+                    <div class="line_home"></div>
+                </div>
+                <div class="right_home">
+                    <div id="About" class="scroll_div">
+                        <div class="scroll_home">
+                            <div class="scroll">
+                                <div class="dot"></div>
+                            </div>
+                            <div class="text">
+                                <p>Scroll</p>
+                                <span id="About"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image_home">
+                        <img src="./img/portfolio_home_img.png" alt="">
+                    </div>
+                    <div class="slogan_home">
+                        <div class="slogan_con">
+                            <div class="ulli">
+                                <ul>
+                                    <li id="heading"><span id="">Find joy</span> in defending
+                                        rather than taking it easy.</li>
+                                    <li id="paragraph">Hii , welcome to my portfolio by the way my name is vishal a software developer .</li>
+                                </ul>
+                            </div>
+                            <div class="cv">
+                                <button id="cv_button" onclick="downloadResume()" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round"
+                                        class="lucide lucide-download-cloud">
+                                        <path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" />
+                                        <path d="M12 12v9" />
+                                        <path d="m8 17 4 4 4-4" />
+                                    </svg>Download resume</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="about">
+                <div class="left_about">
+                    <div class="line_icon_2"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-user">
+                        <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                        <circle cx="12" cy="7" r="4" />
+                    </svg>
+                    <div class="line_about"></div>
+                </div>
+                <div class="rigth_about">
+                    <div class="rigth_about_top">
+                        <div class="rigth_about_top_adjust">
+                            <div class="head_about">
+                                <p id="p1">About</p>
+                            </div>
+                            <div class="info_about">
+                                <p id="p2" style="color: #3cb44e;">Just try something different</p>
+                                <p id="p2l">In code box you able to see my information with good view experience</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right_about_bottom">
+                        <div class="bottom_code_image">
+                            <img id="ACI" src="./img/About_code_image.png" alt="">
+                            <img id="ACIM" src="./img/About_code_image_mobile.png" alt="my_image">
+                        </div>
+                        <div class="about_bottom_my_self">
+                            <div class="movable_background">
+                                <div class="circle_one">
+                                    <div class="text_one">
+                                        <p id="p_one">Ram Ram Ram Ram Ram Ram Ram Ram Ram Ram Ram</p>
+                                    </div>
+                                </div>
+                                <div class="circle_two">
+                                    <div class="text_two">
+                                        <p id="p_two">Ram Ram Ram Ram Ram Ram Ram Ram Ram Ram</p>
+                                    </div>
+                                </div>
+                                <div class="circle_three">
+                                    <div class="text_three">
+                                        <p id="p_three">Ram Ram Ram Ram Ram Ram Ram Ram </p>
+                                    </div>
+                                </div>
+                                <div class="movable_center_shadow"></div>
+                            </div>
+                            <div class="card ">
+
+                                <div class="card_image">
+                                    <img src="./img/my_About_photo.png" alt="my_image">
+                                </div>
+                                <div class="content-box">
+                                    <h1 class="card-title">About</h1>
+                                    <div class="card_content_box">
+                                        <p class="card-content">
+                                            With over 2.5 years of learning and 2 months of work experience as a
+                                            software developer, good knowledge in multiple
+                                            programming languages. Skilled in both backend and frontend development.
+                                            During my internship, I worked as a full-stack
+                                            developer, utilizing Node.js, JavaScript, MongoDB, HTML, CSS, and GitHub. I
+                                            gained valuable experience and enhanced my
+                                            abilities. Additionally, I possess strong knowledge of Data Structures and
+                                            actively participate on platforms like LeetCode,
+                                            GeeksforGeeks, CodingNinjas, HackerRank, and CodeChef, Doing my
+                                            problem-solving and logic skills. Moreover, I am
+                                            familiar with hardware and have successfully worked on IoT projects during
+                                            Hackathons
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="name-box">
+                                    <span class="name">Vishal kumar</span>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="left_about left_skills">
+                    <div class="line_icon_3"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="0.9" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-rocket">
+                        <path
+                            d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+                        <path
+                            d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+                        <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+                        <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                    </svg>
+                    <div class="line_about line_skills"></div>
+                </div>
+                <div class="right_skills">
+                    <div class="right_skills_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">Skills</p>
+                        </div>
+                        <div class="info_about info_skills">
+                            <p id="p2" style="color: #d55d1d;">This is just about your efforts</p>
+                            <p id="p2l">Sharpen your mindset, then watch the universe bend to your will</p>
+                        </div>
+                    </div>
+                    <div class="right_skills_bottom">
+
+                        <div class="skill_frontend">
+                            <div class="skill_frontend_full_occupied" id="skill_frontend_full_occupied">
+                                <div class="skill_frontend_title">
+                                    <p>Frontend Skills</p>
+
+                                </div>
+                                <div class="skill_frontend_icon">
+                                    <span class="icons"><img src="./img/move_icons/HTML_logo.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/CSS3_logo.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/React-icon.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/JavaScript_logo_2.svg" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- .................... -->
+
+                        <div class="skill_backend">
+                            <div class="skill_backend_full_occupied">
+                                <div class="skill_backend_title">
+                                    <p>Backend Skills</p>
+                                </div>
+                                <div class="skill_backend_icon">
+                                    <span class="icons"><img src="./img/move_icons/c++_icon.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/Java-Logo.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/Node.js_logo.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/rest-api-icon.svg" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ........................... -->
+
+                        <div class="skill_miscellaneous">
+                            <div class="skill_miscellaneous_full_occupied">
+                                <div class="skill_miscellaneous_title">
+                                    <p>Miscellaneous Skills</p>
+                                </div>
+                                <div class="skill_miscellaneous_icon">
+                                    <span class="icons"><img src="./img/move_icons/MongoDB_Logo.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/postman-icon.svg" alt=""></span>
+                                    <span class="icons"><img src="./img/move_icons/Github_icon.svg" alt=""></span>
+                                    <!-- <span class="icons"><img src="./img/move_icons/Visual_Studio_Code_1.18_icon.svg" alt=""></span> -->
+                                    <span class="icons"><img src="./img/move_icons/Git_icon.svg" alt=""></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- ................................................... -->
+            <div class="project">
+                <div class="left_about left_projects">
+                    <div class="line_icon_4"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-code">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                    </svg>
+                    <div class="line_about line_projects"></div>
+                </div>
+                <div class="right_projects">
+                    <div class="right_projects_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">Projects</p>
+                        </div>
+                        <div class="info_about ">
+                            <p id="p2" style="color: #33b3ae;">Build you thought using code</p>
+                            <p id="p2l">This help to show your skills and creativeness also it prove you have knowledge
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right_projects_bottom">
+                        <div class="project_main_sec">
+                            <div class="pms_card" id="pms_card">
+                                <div class="pms_card_back_blur_effect"></div>
+                                <div class="project_card_sec" id="project_card_sec">
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Snake Game</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Calculator</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Github User</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Guess Number</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Runner</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>pickup</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Boll Roll</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Find X</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>If</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+                                    <div class="project_card">
+                                        <div class="pc_image">
+                                            <img src="./img/comming_soooon.jpg" alt="">
+                                        </div>
+                                        <div class="pc_title">
+                                            <span>Toss</span>
+                                        </div>
+                                        <div class="pc_visit_btn">
+                                            <button class="button2" onclick="upComingFeatureAlert()" >View project</button>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- <div class="project_card_move_main">
+                                <div class="card_move_btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="2 -4 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg></div>
+                                <div class="card_move_sec">
+                                    <div class="card_sec_position " id="active_card_sec"></div>
+                                    <div class="card_sec_position "></div>
+                                    <div class="card_sec_position"></div>
+                                    <div class="card_sec_position"></div>
+                                </div>
+                                <div class="card_move_btn"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="12" viewBox="2 4 22 22" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg></div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- .......................................... -->
+
+
+            <div class="profiles" id="profiles">
+                <div class="left_about left_profiles">
+                    <div class="line_icon_7"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-heart-handshake">
+                        <path
+                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                        <path
+                            d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66" />
+                        <path d="m18 15-2-2" />
+                        <path d="m15 18-2-2" />
+                    </svg>
+                    <div class="line_about line_profiles"></div>
+                </div>
+                <div class="right_profiles">
+                    <div class="right_profiles_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">My Profile</p>
+                        </div>
+                        <div class="info_about ">
+
+                            <p id="p2" style="color: #d43c8b;">Network show communication skills</p>
+                            <p id="p2l">having knowledge is good but without network waste</p>
+                        </div>
+                    </div>
+
+
+
+                    <div class="right_profiles_bottom">
+                        <div class="social_profiles">
+                            <div class="social_profile_main">
+                                <div class="social_cursor_back_blur_effect"></div>
+                                <div class="social_data">
+                                    <div class="social_data_left">
+                                        <h2 id="sdl_heading">Social</h2>
+                                        <p id="sdl_title"><span style="color: #d6d6d6;">Mostly active</span> on whatsApp
+                                            and linkedIn, checkout my all profile and follow to know me well.</p>
+                                        <p id="sdl_view_btn">Only for professional engagement </p>
+                                        <!-- <input type="button" value="Invest with GitHub Sponsors "> -->
+
+                                    </div>
+                                    <div class="social_data_right">
+                                        <div class="social_data_right_angle_scroll">
+                                            <div class="social_data_right_onangle">
+
+                                                <div class="sdro_section_1">
+                                                    <!-- <div class="sdro_gap_btw"></div> -->
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/instagram_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Instagram</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                onclick="OpenLinkInNewTab('https://www.instagram.com/sanatani_vishal_kumar__17/?next=%2F')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.instagram.com/sanatani_vishal_kumar__17/?next=%2F')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon//linkdlin_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title" id="">linkedin</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.linkedin.com/in/vishal-kumar-j17/')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                    height="24" viewBox="0 0 24 24" fill="none"
+                                                                    stroke="currentColor" stroke-width="2"
+                                                                    stroke-linecap="round" stroke-linejoin="round"
+                                                                    class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                        </svg>
+                                                                        <span onclick="OpenLinkInNewTab('https://www.linkedin.com/in/vishal-kumar-j17/')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/twitter_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Twitter</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://x.com/Vishal_kumar_17?t=GPMs1O40VsRM8SjUMnrIfQ&s=09')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://x.com/Vishal_kumar_17?t=GPMs1O40VsRM8SjUMnrIfQ&s=09')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdro_gap_btw"></div> -->
+                                                </div>
+                                                <div class="sdro_section_2">
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/Snap_chat_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Snap Chat</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.snapchat.com/add/vishal_shah007?share_id=em2QfOCh6Hg&locale=en-IN')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.snapchat.com/add/vishal_shah007?share_id=em2QfOCh6Hg&locale=en-IN')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/github_icon.png" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Github</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://github.com/vishalkumar1007')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://github.com/vishalkumar1007')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/facebook_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Facebook</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.facebook.com/vishal.kumar.its')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.facebook.com/vishal.kumar.its')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/messenger_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdr_card"></div> -->
+                                                </div>
+                                                <div class="sdro_section_3">
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/instagram_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Instagram</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/whatsapp_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Whatsapp</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://wa.me/916205594943/?text=Hii,%20Vishal')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://wa.me/916205594943/?text=Hii,%20Vishal')">
+                                                                    
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/telegram_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Telegram</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://t.me/Vishal2003india')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://t.me/Vishal2003india')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/Youtube_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Youtube</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';" target="_blank">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';" target="_blank">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdr_card"></div> -->
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="between_social_and_coding_highlight">
+                            <div class="bsc_adjust_div">
+                                <p id="bsc_achivement">Achievement of Solving Over 250+ DSA Problem's</p>
+                            </div>
+                        </div>
+
+                        <div class="coding_profiles">
+                            <div class="coding_profile_main">
+                                <div class="coding_cursor_back_blur_effect"></div>
+                                <div class="coding_data">
+                                    <div class="social_data_left">
+                                        <h2 id="sdl_heading">Coding</h2>
+                                        <p id="sdl_title"><span style="color: #d6d6d6;">Solving DSA</span> problem's
+                                            over all this platform's , leetCode and gfg is my first choice.</p>
+                                        <p id="sdl_view_btn">View my leetcode profile</p>
+                                        <!-- <input type="button" value="Invest with GitHub Sponsors "> -->
+
+                                    </div>
+                                    <div class="social_data_right">
+                                        <div class="social_data_right_angle_scroll">
+                                            <div class="social_data_right_onangle">
+
+                                                <div class="sdro_section_1">
+                                                    <!-- <div class="sdro_gap_btw"></div> -->
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/GeeksforGeeks.svg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">GeeksforGeeks</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://auth.geeksforgeeks.org/user/vishal_kumar_17')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://auth.geeksforgeeks.org/user/vishal_kumar_17')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/leetcode.svg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title" id="">leetCode</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://leetcode.com/vishal_kumar_17/')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://leetcode.com/vishal_kumar_17/')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/HackerEarth_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">HackerEarth</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.hackerearth.com/@vishalkumarnke93')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.hackerearth.com/@vishalkumarnke93')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdro_gap_btw"></div> -->
+                                                </div>
+                                                <div class="sdro_section_2">
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/mdn_icon.svg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">MDN</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://developer.mozilla.org/en-US/')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://developer.mozilla.org/en-US/')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/coding-ninjas-logos-idhgFUNid6.svg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Coding Ninjas</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.codingninjas.com/studio/profile/vishal_kumar_17')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.codingninjas.com/studio/profile/vishal_kumar_17')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/free_code_camp.Default"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">FreeCodeCamp</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.freecodecamp.org/vishal_kumar_17')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.freecodecamp.org/vishal_kumar_17')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/move_icons/Visual_Studio_Code_1.18_icon.svg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Vs code</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                onclick="OpenLinkInNewTab('https://code.visualstudio.com/')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://code.visualstudio.com/')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdr_card"></div> -->
+                                                </div>
+                                                <div class="sdro_section_3">
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/" alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">DOUBLICATE</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="window.location.href='#Home';">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="window.location.href='#home';">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/social_icon/instagram_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">Google</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.google.com')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.google.com')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/HackerRank_Icon-1000px.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">HackerRank</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.hackerrank.com/profile/vishalkumarnke93')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.hackerrank.com/profile/vishalkumarnke93')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/codeChef_icon.jpg"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">CodeChef</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://www.codechef.com/users/vishalkumar_17')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://www.codechef.com/users/vishalkumar_17')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="sdr_card">
+                                                        <div class="sdr_card_contain">
+                                                            <div class="sdr_card_icon">
+                                                                <img src="./img/coding_icon/tuf_icon.png"
+                                                                    alt="Social icon">
+                                                            </div>
+                                                            <div class="sdr_card_title">TakeUforward</div>
+                                                            <div class="sdr_card_view_btn">
+                                                                <div class="sdr_btn"
+                                                                    onclick="OpenLinkInNewTab('https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/#')">
+                                                                    <svg xmlns="http://www.w3.org/2000/svg" width="24"
+                                                                        height="24" viewBox="0 0 24 24" fill="none"
+                                                                        stroke="currentColor" stroke-width="2"
+                                                                        stroke-linecap="round" stroke-linejoin="round"
+                                                                        class="lucide lucide-heart">
+                                                                        <path
+                                                                            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+                                                                    </svg>
+                                                                    <span onclick="OpenLinkInNewTab('https://takeuforward.org/interviews/strivers-sde-sheet-top-coding-interview-problems/#')">
+                                                                        View
+                                                                    </span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- <div class="sdr_card"></div> -->
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="events_and_certification">
+                <div class="left_about left_events_and_certification">
+                    <div class="line_icon_6"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-shield-check">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                        <path d="m9 12 2 2 4-4" />
+                    </svg>
+                    <div class="line_about line_events_and_certification"></div>
+                </div>
+                <div class="right_events_and_certification">
+                    <div class="right_events_and_certification_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">Events and Certifications</p>
+                        </div>
+                        <div class="info_about ">
+                            <p id="p2" style="color: #6235c3;">Achievements boost my works</p>
+                            <!-- <p id="p2" style="color: #5a47d6;">Achievements boost my works</p> -->
+                            <p id="p2l">Don't wait for result just do your work with your full potential</p>
+                        </div>
+                    </div>
+
+                    <div class="right_events_and_certification_bottom">
+                        <div class="re_and_cb_main">
+                            <div class="re_and_cb_main_left">
+                                <div class="re_and_cb_main_left_sec1">
+                                    <span id="recb_toggle_title_event">
+                                        <p>Certificates</p>
+                                    </span>
+                                    <div class="recb_sec1_container">
+                                        <input type="checkbox" id="recb_sec1_input" />
+                                        <label for="recb_sec1_input" id="recb_sec1_lable"></label>
+                                    </div>
+                                    <span id="recb_toggle_title_certficate">
+                                        <p>Events</p>
+                                    </span>
+                                </div>
+
+                                <!-- ............ -->
+
+                                <div class="re_and_cb_main_left_sec2">
+                                    <div class="recb_title">
+                                        <p id="recb_title">Full Stack Developer Intern</p>
+                                    </div>
+                                    <div class="recb_company_org">
+                                        <span id="recb_companyname">Appenius private limited | july 2023 - sep
+                                            2023</span>
+                                    </div>
+                                    <div class="recb_experience">
+                                        <p id="recb_exp_about">hello guys</p>
+                                    </div>
+                                    <div class="recb_view_btn">
+                                        <div class="recb_btn_before_div" id="recb_btn_before_div"></div>
+                                        <button id="recb_btn"><a href="" id="recb_btn_a" target="_blank">View
+                                                Doc</a></button>
+                                    </div>
+                                </div>
+
+                                <div class="re_and_cb_main_left_sec3">
+
+                                </div>
+                            </div>
+
+                            <div class="re_and_cb_main_right">
+                                <div class="re_and_cb_main_right_laptop">
+                                    <img src="./img/vishal_mackbook_dark.png" alt="">
+                                    <div class="re_and_cb_screen"> <!-- changeable  -->
+                                        <img id="scrimg"
+                                            src="./img/top-view-eid-al-fitr-celebration-with-delicious-food_23-2151205080.jpg"
+                                            alt="">
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="education">
+                <div class="left_about left_education">
+                    <div class="line_icon_5"></div>
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-graduation-cap"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg> -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-gamepad-2">
+                        <line x1="6" x2="10" y1="11" y2="11" />
+                        <line x1="8" x2="8" y1="9" y2="13" />
+                        <line x1="15" x2="15.01" y1="12" y2="12" />
+                        <line x1="18" x2="18.01" y1="10" y2="10" />
+                        <path
+                            d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z" />
+                    </svg>
+                    <div class="line_about line_education"></div>
+                </div>
+                <div class="right_education">
+                    <div class="right_education_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">Game</p>
+                        </div>
+                        <div class="info_about ">
+                            <p id="p2" style="color: #68a900;">Build you thought using code</p>
+                            <p id="p2l">This help to show your skills and creativeness also it prove you have knowledge
+                            </p>
+                        </div>
+                    </div>
+                    <div class="right_education_bottom">
+                        <div class="custom-container">
+                            <div class="mainX">
+                                <div id='contentXX'>
+                                    <!-- <p>THIS SECTION</p> -->
+                                    <div class='titleXX'>
+                                        <span >COMING SOON</span>
+                                    </div>
+                                    <section>
+                                        <ul id="countdown">
+                                            <li><span class="days timenumbers">01</span>
+                                                <p class="timeRefDays timedescription">days</p>
+                                            </li>
+                                            <li><span class="hours timenumbers">00</span>
+                                                <p class="timeRefHours timedescription">hours</p>
+                                            </li>
+                                            <li><span class="minutes timenumbers">00</span>
+                                                <p class="timeRefMinutes timedescription">minutes</p>
+                                            </li>
+                                            <li><span class="seconds timenumbers yellow-text">00</span>
+                                                <p class="timeRefSeconds timedescription">seconds</p>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact" id="contact">
+                <div class="left_about left_contact">
+                    <div class="line_icon_8"></div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-message-square-heart">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        <path
+                            d="M14.8 7.5a1.84 1.84 0 0 0-2.6 0l-.2.3-.3-.3a1.84 1.84 0 1 0-2.4 2.8L12 13l2.7-2.7c.9-.9.8-2.1.1-2.8" />
+                    </svg>
+                    <div class="line_about line_contact"></div>
+                </div>
+                <div class="right_contact">
+                    <div class="right_contact_top">
+                        <div class="head_about head_skills">
+                            <p id="p1">Contact or Feedback</p>
+                        </div>
+                        <div class="info_about ">
+                            <p id="p2" style="color: #b6103d;">let's get in touch</p>
+                            <p id="p2l">Hire me or wanna give me some feedback, use this section</p>
+                        </div>
+                    </div>
+                    <div class="right_contact_bottom">
+                        <div class="feedback_sec">
+                            <div class="feedback_right">
+                                <div class="feedback_right_form_main">
+                                    <div class="contact_right_main">
+
+                                        <img src="./img/stuff_icon_contact_3.png" alt="">
+                                        <div class="contact_my_photo_div"
+                                            onclick="window.location.href='mailto:vishalkumarnke93@gmail.com'"
+                                            target="_blank">
+                                            <div class="cp_title">Gmail</div>
+                                            <div class="cp_logo">
+                                                <img src="./img/social_icon/gmail_icon.png" alt="">
+                                            </div>
+                                            <div class="cp_name">Click for mail</div>
+                                        </div>
+                                        <div class="contact_gmail_div">
+                                            <div class="cg_title">Developer</div>
+                                            <div class="cg_logo">
+                                                <img src="./img/social_icon/its_me.jpg" alt="">
+                                            </div>
+                                            <div class="cg_name">Vishal kumar</div>
+
+                                        </div>
+                                        <div class="contact_whatsapp_div"
+                                            onclick="window.location.href='https://wa.me/916205594943/?text=Hii,%20Vishal'"
+                                            target="_blank">
+                                            <div class="cw_title">Whatsapp</div>
+                                            <div class="cw_logo">
+                                                <img src="./img/social_icon/whatsapp_icon.png" alt="">
+                                            </div>
+                                            <div class="cw_name">Tap for msg</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="feedback_left">
+                                <div class="feedback_left_form_main">
+
+                                    <div class="feedback_form">
+                                        <div class="feedback_heading">
+                                            <h1 id="feedback_h1">Your Feedback</h1>
+                                        </div>
+                                        <form action="" id="feedback_form_org">
+                                            <div class="form_sec_name">
+                                                <label id="fed_label" for="name">Name</label>
+                                                <input id="fed_input_name" type="name" name="name">
+                                            </div>
+                                            <div class="form_sec_email">
+                                                <label id="fed_label" for="email">Email</label>
+                                                <input id="fed_input_email" type="email" name="email">
+                                            </div>
+                                            <div class="form_sec_message">
+                                                <label id="fed_label" for="message">Message</label>
+                                                <input id="fed_input_message" type="message" name="message">
+                                                <!-- <textarea id="w3review" name="w3review" rows="2" cols="50"></textarea> -->
+                                            </div>
+                                            <div class="form_sec_submit_btn">
+                                                <input type="submit" name="submit" value="Send" id="fss_btn" onclick="upComingFeatureAlert()">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./index.js"></script>
+    <script>
+        function intro_alert() {
+            alert("This site is under development phase, many new features will come soon. Please visit again after some time.");
+        }
+        window.addEventListener('load', intro_alert);
+    </script>
+</body>
+
+</html>

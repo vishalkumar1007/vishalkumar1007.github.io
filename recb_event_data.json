@@ -1,0 +1,58 @@
+{  
+    "d1": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_6.jpeg.jpg",   
+        "recb_title":      "Allegretto event",   
+        "recb_company" :    "Odisha government",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>",
+        "heading_color" : "99231d"
+    },
+    "d2": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_5.jpeg.jpg",   
+        "recb_title":      "Allegretto event",   
+        "recb_company" :    "Odisha government",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>",
+        "heading_color" : "99231d"
+    },
+    "d3": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_4.jpeg.jpg",   
+        "recb_title":      "Allegretto event",   
+        "recb_company" :    "Odisha government",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>",
+        "heading_color" : "99231d"
+    },
+    "d4": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_7.jpeg.jpg",   
+        "recb_title":      "Innovate Odisha Hackathons",   
+        "recb_company" :    "karkhana odisha",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>" ,
+        "heading_color" : "c5982c"
+    },
+    "d5": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_8.jpeg.jpg",   
+        "recb_title":      "Innovate Odisha Hackathons",   
+        "recb_company" :    "karkhana odisha",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>" ,
+        "heading_color" : "c5982c"
+    },
+    "d6": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_3.jpeg.jpg",   
+        "recb_title":      "Innovate Odisha Hackathons",   
+        "recb_company" :    "karkhana odisha",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>" ,
+        "heading_color" : "c5982c"
+    },
+    "d7": {  
+        "src":  "./img/event_and_certificate_photo_db/1709748920947-01_event_2.jpeg.jpg",   
+        "recb_title":      "Innovate Odisha Hackathons",   
+        "recb_company" :    "karkhana odisha",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>" ,
+        "heading_color" : "c5982c"
+    },
+    "d8": {  
+        "src":  "./img/event_and_certificate_photo_db/IMG_20230219_213736_event1.jpg",   
+        "recb_title":      "Innovate Odisha Hackathons",   
+        "recb_company" :    "karkhana odisha",
+        "recb_about" : "<b>This all are my event picture between 2021 to 2022 after that whatever event i attend i just forgot to take picture but from next time i will take care of it.</b>" ,
+        "heading_color" : "c5982c"
+    }
+}
