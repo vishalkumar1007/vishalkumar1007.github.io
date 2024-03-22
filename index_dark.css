@@ -5329,6 +5329,7 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
         /* background-color: rgb(61, 7, 7); */
         width: 100%;
         height: 160px;
+        overflow: hidden;
     }
     .sdr_card_icon{
         width: 55px;
