@@ -1752,6 +1752,8 @@ li{
     overflow: hidden;
     left: -8%;
     top: 0;
+    /* box-sizing: border-box;
+    padding-left: 10px; */
 }
 
 .social_profile_main:hover > .social_cursor_back_blur_effect {
@@ -1814,14 +1816,15 @@ li{
     /* background-color: #af03b8; */
     width: 60%;
     height: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: end;
     align-items: center;
-    /* overflow: ; */
+    /* overflow: none; */
     position: relative;
+    /* padding-left: 10px; */
 }
 .social_data_right_angle_scroll{
-    /* background-color: rgb(104, 34, 34); */
+    /* background-color: #682222; */
     width: 90%;
     height: 150%;
     display: flex;
@@ -1831,6 +1834,7 @@ li{
     position: absolute;
     top: -75px;
     overflow: scroll;
+
 }
 .social_data_right_angle_scroll::-webkit-scrollbar{
     background-color: transparent;
@@ -1839,10 +1843,10 @@ li{
     
 }
 .social_data_right_onangle{
+    /* background-color: #478187; */
     box-sizing: border-box;
     width: 90%;
     /* height: 120%; */
-    /* background-color: #478187; */
     display: flex;
     justify-content: end;
     gap: 20px;
@@ -1855,10 +1859,11 @@ li{
     height: 100%;
     display: flex;
     flex-direction: column;
-    gap: 20px
-    
+    gap: 20px;
+    scroll-snap-align: center;
 }
 .sdro_section_2{
+    /* background-color: red; */
     width: 30%;
     height: 100%;
     display: flex;
@@ -5288,29 +5293,40 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
     }
     .social_data_right_angle_scroll{
         /* background-color: rgb(104, 34, 34); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-right: 20px;
         width: 100%;
-        height: 165%;
-        top: -27px;
-        left: -9px;
+        height: 171%;
+        top: -28px;
+        left: 0px;
         rotate: 0deg;
         /* margin: 30px; */
+        /* overflow-y: auto; */
+        /* scroll-snap-type: y mandatory; */
     }
     .social_data_right_onangle{
+        box-sizing: border-box;
         /* background-color: #478187; */
-        gap: 14px;
+        justify-content: center;
+        /* gap: 14px; */
         margin: 36px 0px;
+        /* padding-left: 5px; */
     }
     .sdro_section_1{
-        gap: 14px
+        gap: 14px;
+        scroll-snap-align: center;
     }
     .sdro_section_2{
-        gap: 14px
+        gap: 14px;
     }
     .sdro_section_3{
-        gap: 14px
+        gap: 14px;
     }
     .sdr_card{
         background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
         width: 100%;
         height: 160px;
     }
@@ -5751,6 +5767,64 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
         letter-spacing: -0.03em !important;
         font-weight: 800 !important;
     }
+
+    /* ................... profile card ...............  */
+
+    .social_data_right_angle_scroll{
+        /* background-color: rgb(104, 34, 34); */
+        padding-right: 20px;
+        height: 171%;
+        top: -28px;
+        left: 0px;
+    }
+    .social_data_right_onangle{
+        justify-content: center;
+        margin: 36px 0px;
+        /* padding-left: 5px; */
+        /* gap: 1px; */
+    }
+    .sdro_section_1{
+        /* background-color: red; */
+        gap: 14px;
+        scroll-snap-align: center;
+    }
+    .sdro_section_2{
+        gap: 14px;
+    }
+    .sdro_section_3{
+        gap: 14px;
+    }
+    .sdr_card{
+        background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
+        width: 100%;
+        height: 160px;
+    }
+    .sdr_card_icon{
+        width: 54px;
+        height: 54px;
+    }
+    .sdr_card_title{
+        /* background-color: #cb4c4c; */
+        width: 80%;
+        font-size: 13px;
+    }
+    .sdr_card_view_btn{
+        /* background-color: #af5252;     */
+        width: 79%;
+        height: 15%;
+        margin-top: 12px;
+    }
+    .sdr_btn{
+        gap: 5px;
+    }
+    .sdr_btn svg{
+        width: 10px;
+
+    }
+    .sdr_btn span{
+        font-size: 10px;
+    }
 }
 @media screen and (max-width:400px) {
     .movable_background{
@@ -5874,6 +5948,42 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
         font-size:2vw;
         color: #8b949e;
     }
+    /* .. profile ..  */
+    .social_data_right_onangle{
+        gap: 11px;
+    }
+    .sdr_card{
+        background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
+        width: 100%;
+        height: 160px;
+    }
+    .sdr_card_icon{
+        width: 50px;
+        height: 50px;
+    }
+    .sdr_card_title{
+        /* background-color: #cb4c4c; */
+        width: 80%;
+        font-size: 12.2px;
+    }
+    .sdr_card_view_btn{
+        /* background-color: #af5252;     */
+        width: 79%;
+        height: 15%;
+        margin-top: 12px;
+    }
+    .sdr_btn{
+        gap: 5px;
+    }
+    .sdr_btn svg{
+        width: 9.5px;
+
+    }
+    .sdr_btn span{
+        font-size: 9.5px;
+    }
+
 }
 @media screen and (max-width:385px) {
     .movable_background{
@@ -6017,6 +6127,53 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
         width: 30px;
         height: 30px;
     }
+    /* .... profile ...  */
+    .social_data_right_onangle{
+        gap: 10px;
+    }
+    .sdro_section_1{
+        /* background-color: red; */
+        gap: 14px;
+        scroll-snap-align: center;
+    }
+    .sdro_section_2{
+        gap: 14px;
+    }
+    .sdro_section_3{
+        gap: 14px;
+    }
+    .sdr_card{
+        background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
+        width: 100%;
+        height: 160px;
+    }
+    .sdr_card_icon{
+        width: 50px;
+        height: 50px;
+    }
+    .sdr_card_title{
+        /* background-color: #cb4c4c; */
+        width: 80%;
+        font-size: 12.2px;
+    }
+    .sdr_card_view_btn{
+        /* background-color: #af5252;     */
+        width: 85%;
+        height: 15%;
+        margin-top: 12px;
+    }
+    .sdr_btn{
+        gap: 4px;
+    }
+    .sdr_btn svg{
+        width: 9px;
+
+    }
+    .sdr_btn span{
+        font-size: 9px;
+    }
+    
 }
 @media screen and (max-width:330px) {
     .movable_background{
@@ -6047,6 +6204,117 @@ textarea:focus, #feedback_form_org #fed_input_email:focus, #fed_input_name:focus
         left: 35%;
         z-index: -1;
         filter: blur(20px);
+    }
+    /* ...social ..  */
+
+    .social_data_right_onangle{
+        gap: 8px;
+    }
+    .sdro_section_1{
+        /* background-color: red; */
+        gap: 14px;
+        scroll-snap-align: center;
+    }
+    .sdro_section_2{
+        gap: 14px;
+    }
+    .sdro_section_3{
+        gap: 14px;
+    }
+    .sdr_card{
+        background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
+        width: 100%;
+        height: 160px;
+    }
+    .sdr_card_icon{
+        width: 50px;
+        height: 50px;
+    }
+    .sdr_card_title{
+        /* background-color: #cb4c4c; */
+        width: 80%;
+        font-size: 11px;
+    }
+    .sdr_card_view_btn{
+        /* background-color: #af5252;     */
+        width: 95%;
+        height: 13%;
+        margin-top: 12px;
+    }
+    .sdr_btn{
+        gap: 4px;
+    }
+    .sdr_btn svg{
+        width: 9px;
+
+    }
+    .sdr_btn span{
+        font-size: 9px;
+    }
+}
+@media screen and (max-width:290px) {
+    .movable_background{
+        display: none;
+    }
+    .contact_right_main::after{
+        background-color: #b6103c77;
+        content: " ";
+        position: absolute;
+        width: 30%;
+        height: 40%;
+        top: 30%;
+        left: 35%;
+        z-index: -1;
+        filter: blur(20px);
+    }
+    /* ...social ..  */
+
+    .social_data_right_onangle{
+        gap: 8px;
+    }
+    .sdro_section_1{
+        /* background-color: red; */
+        gap: 14px;
+        scroll-snap-align: center;
+    }
+    .sdro_section_2{
+        gap: 14px;
+    }
+    .sdro_section_3{
+        gap: 14px;
+    }
+    .sdr_card{
+        background-color: #131521;
+        /* background-color: rgb(61, 7, 7); */
+        width: 100%;
+        height: 160px;
+    }
+    .sdr_card_icon{
+        width: 120%;
+        height: 40%;
+        border-radius: 50%;
+    }
+    .sdr_card_title{
+        /* background-color: #cb4c4c; */
+        width: 80%;
+        font-size: 65%;
+    }
+    .sdr_card_view_btn{
+        /* background-color: #af5252;     */
+        width: 95%;
+        height: 13%;
+        margin-top: 12px;
+    }
+    .sdr_btn{
+        gap: 3px;
+    }
+    .sdr_btn svg{
+        width: 25%;
+
+    }
+    .sdr_btn span{
+        font-size: 46%;
     }
 }
 
