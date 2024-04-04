@@ -226,3 +226,6 @@ function upComingFeatureAlert() {
 function intro_alert(){
     alert("This site is under development phase , many new features will come soon . please visit again after some time.");
 }
+
+
+// user visit show . 
