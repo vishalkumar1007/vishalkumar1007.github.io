@@ -34,7 +34,7 @@ toggle_nav_close.addEventListener('click', () => {
 
 function downloadResume() {
     var link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1hbG5IB5do-98hBUCIaCAB_1WrOIzGhP7';
+    link.href = 'https://drive.google.com/file/d/13SjJ_G1CmiBkJcBoWM2i48UiRuTStgAI/view?usp=sharing';
     link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
