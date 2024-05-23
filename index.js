@@ -1,3 +1,6 @@
+// import { initializeApp } from 'firebase/app';
+// import { getDatabase, ref, set } from 'firebase/database';
+
 const toggleBtn = document.querySelector('.toggle_btn');
 const toggleNav = document.querySelector('.toggle_nav');
 const toggle_nav_close = document.getElementById('toggle_nav_close');
@@ -43,8 +46,8 @@ function downloadResume() {
 
 
 // .................. Toggle Nav BarProp ............... 
-let bool = true;
-document.getElementById("lightMode").disabled = true;
+// let bool = true;
+// document.getElementById("lightMode").disabled = true;
 
 // document.getElementById("darkmode-toggle").onclick = function () {
 //     if (bool) {
@@ -180,35 +183,35 @@ attachMouseMoveListener(pms_card, pms_card_back_blur_effect);
 // coming soon----------------------------
 
 var countDownDate = new Date();
-    countDownDate.setDate(countDownDate.getDate() + 4);
+countDownDate.setDate(countDownDate.getDate() + 4);
 
     // Update the countdown every 1 second
-    var x = setInterval(function() {
+var x = setInterval(function() {
 
-        // Get the current date and time
-        var now = new Date().getTime();
+    // Get the current date and time
+    var now = new Date().getTime();
 
-        // Calculate the remaining time
-        var distance = countDownDate - now;
+    // Calculate the remaining time
+    var distance = countDownDate - now;
 
-        // Calculate days, hours, minutes and seconds
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // Calculate days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        // Display the countdown
-        document.querySelector(".days").innerText = days < 10 ? `0${days}` : days;
-        document.querySelector(".hours").innerText = hours < 10 ? `0${hours}` : hours;
-        document.querySelector(".minutes").innerText = minutes < 10 ? `0${minutes}` : minutes;
-        document.querySelector(".seconds").innerText = seconds < 10 ? `0${seconds}` : seconds;
+    // Display the countdown
+    document.querySelector(".days").innerText = days < 10 ? `0${days}` : days;
+    document.querySelector(".hours").innerText = hours < 10 ? `0${hours}` : hours;
+    document.querySelector(".minutes").innerText = minutes < 10 ? `0${minutes}` : minutes;
+    document.querySelector(".seconds").innerText = seconds < 10 ? `0${seconds}` : seconds;
 
-        // If the countdown is over, display a message
-        if (distance < 0) {
-            clearInterval(x);
-            document.getElementById("countdown").innerHTML = "<p>EXPIRED</p>";
-        }
-    }, 1000);
+    // If the countdown is over, display a message
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("countdown").innerHTML = "<p>EXPIRED</p>";
+    }
+}, 1000);
     
 // .................. OpenLinkInNewTab .......................
 
@@ -228,4 +231,5 @@ function intro_alert(){
 }
 
 
-// user visit show . 
+// User feedback data Store into firebase 
+
