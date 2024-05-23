@@ -37,7 +37,7 @@ toggle_nav_close.addEventListener('click', () => {
 
 function downloadResume() {
     var link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/13SjJ_G1CmiBkJcBoWM2i48UiRuTStgAI/view?usp=sharing';
+    link.href = 'https://drive.google.com/file/d/1xf-J0xC0ZZbxpkld0HmKDVPCvIeFSDes/view?usp=drive_link';
     link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
@@ -228,8 +228,22 @@ function upComingFeatureAlert() {
 
 function intro_alert(){
     alert("This site is under development phase , many new features will come soon . please visit again after some time.");
+    getUserIp();
 }
 
 
-// User feedback data Store into firebase 
+// Get User IP
 
+async function getUserIp() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json(); 
+        const ip = data.ip; 
+        console.log("This is user IP:", ip); 
+    } catch (error) {
+        console.error("Failed to fetch IP address:", error);
+    }
+}
