@@ -107,9 +107,9 @@ const getLocalStorageCode = async () => {
         await fetchToShow_visit_data();
         
         LS_code = G_code;
-        console.log('Code generated and saved to DB');
+        console.log('WELCOME "This is first time you visit my portfolio Thank you" ');
     } else {
-        console.log("You already visited this site before.");
+        console.log('WELCOME AGAIN "You already visited my portfolio before" ');
         await fetchToShow_visit_data();
     }
 }
