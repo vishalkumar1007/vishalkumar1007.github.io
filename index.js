@@ -25,10 +25,9 @@ async function getUserIp() {
             throw new Error('Network response was not ok ' + response.statusText);
         }
         const data = await response.json();
-        let ip = data.ip.replace(/\./g, "");
+        const ip = data.ip.replace(/\./g, "");
         const User_IP = ip.slice(0, 6);
-        console.log("This is user IP:", ip);
-
+        
         const allIps = await get_all_ip_data_from_database();
         await saveOrNot(User_IP, allIps);
 
@@ -57,10 +56,10 @@ async function get_all_ip_data_from_database() {
 // Check if IP exists and save if not
 async function saveOrNot(inputIP_Data, allIps) {
     if (allIps.includes(inputIP_Data)) {
-        console.log("IP already exists in the database");
+       console.log("You already visited this site before.");
     } else {
         await saveData(inputIP_Data);
-        console.log("IP saved to the database");
+        
     }
 }
 
@@ -82,13 +81,10 @@ const updateVisitCount = async () => {
     try {
         const userVisitRef = database.ref('users_visit_count');
         const snapshot = await userVisitRef.once('value');
-
         let userVisitCount = snapshot.val()?.visit_count || 0;
-        console.log(`User visit count is: ${userVisitCount}`);
         userVisitCount += 1;
-
         await userVisitRef.set({ visit_count: userVisitCount });
-        console.log(`User visit count is now: ${userVisitCount}`);
+
     } catch (error) {
         console.error("Error fetching or updating data in updateVisitCount:", error);
     }
@@ -108,8 +104,6 @@ const fetch_visit_data = async () => {
         } else {
             console.error("Element with id 'site_visit_data' not found.");
         }
-
-        console.log('Visit data:', userVisitCount);
     } catch (error) {
         console.error("Error fetching data in fetch_visit_data:", error);
     }
