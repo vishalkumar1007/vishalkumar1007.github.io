@@ -18,65 +18,49 @@ firebase.initializeApp(firebaseConfig);
 const database = firebase.database();
 
 // Get User IP
-async function getUserIp() {
-    try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        const data = await response.json();
-        const ip = data.ip.replace(/\./g, "");
-        const User_IP = ip.slice(0, 6);
-        
-        const allIps = await get_all_ip_data_from_database();
-        await saveOrNot(User_IP, allIps);
-
-    } catch (error) {
-        console.error("Failed to fetch IP address:", error);
+// Function to generate a random code
+const generateRandomCodeForUser = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#%&_123456789';
+    const minLength = 8;
+    const maxLength = 10;
+    const length = Math.floor(Math.random() * (maxLength - minLength + 1)) + minLength;
+    let randomCode = '';
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        randomCode += characters[randomIndex];
     }
+    return randomCode;
 }
 
-// Retrieve IP data from the database and return it
-async function get_all_ip_data_from_database() {
+// Function to check if a code exists in the database
+const findCodeInDB = async (code) => {
     try {
-        const myMsgRef = database.ref('All_visited_user_IP');
-        const snapshot = await myMsgRef.once('value');
-        const allIps = [];
-        snapshot.forEach((childSnapshot) => {
-            const message = childSnapshot.val().User_IP;
-            allIps.push(message);
+        const codeRef = database.ref('user_local_storage_code');
+        const user_code_snapshot = await codeRef.once('value');
+        let codeExists = false;
+        user_code_snapshot.forEach((childSnapshot) => {
+            if (childSnapshot.val().local_storage_userVisit_code === code) {
+                codeExists = true;
+            }
         });
-        return allIps;
+        return codeExists;
     } catch (error) {
-        console.error("Error fetching data:", error);
-        return [];
+        console.log('Error fetching in findCodeInDB:', error);
+        return false;
     }
 }
 
-// Check if IP exists and save if not
-async function saveOrNot(inputIP_Data, allIps) {
-    if (allIps.includes(inputIP_Data)) {
-       console.log("You already visited this site before.");
-    } else {
-        await saveData(inputIP_Data);
-        
-    }
-}
-
-// Save new IP
-const saveData = async (User_IP) => {
+// Function to save a code to the database
+const saveCodeToDB = async (code) => {
     try {
-        const myMsgRef = database.ref('All_visited_user_IP');
-        await myMsgRef.push().set({
-            User_IP: User_IP
-        });
-        await updateVisitCount();
+        const myMsgRef = database.ref('All_visited_user_local_storage_code');
+        await myMsgRef.push().set({ local_storage_userVisit_code: code });
     } catch (error) {
         console.error("Error saving data:", error);
     }
 }
 
-// Save and update user visit count
+// Function to update the visit count
 const updateVisitCount = async () => {
     try {
         const userVisitRef = database.ref('users_visit_count');
@@ -84,20 +68,17 @@ const updateVisitCount = async () => {
         let userVisitCount = snapshot.val()?.visit_count || 0;
         userVisitCount += 1;
         await userVisitRef.set({ visit_count: userVisitCount });
-
     } catch (error) {
-        console.error("Error fetching or updating data in updateVisitCount:", error);
+        console.error("Error updating visit count:", error);
     }
 }
 
-// Show visit data in UI
-const fetch_visit_data = async () => {
+// Function to fetch and display visit data
+const fetchToShow_visit_data = async () => {
     try {
         const userVisitRef = database.ref('users_visit_count');
         const snapshot = await userVisitRef.once('value');
-
         const userVisitCount = snapshot.val()?.visit_count || 'no data available';
-
         const visitDataElement = document.getElementById('site_visit_data');
         if (visitDataElement) {
             visitDataElement.innerText = userVisitCount;
@@ -105,7 +86,31 @@ const fetch_visit_data = async () => {
             console.error("Element with id 'site_visit_data' not found.");
         }
     } catch (error) {
-        console.error("Error fetching data in fetch_visit_data:", error);
+        console.error("Error fetching visit data:", error);
+    }
+}
+
+// Function to get or generate a local storage code
+const getLocalStorageCode = async () => {
+    let LS_code = localStorage.getItem('local_storage_userVisit_code');
+    if (LS_code === null) {
+        let G_code;
+        let codeInDatabase;
+        do {
+            G_code = generateRandomCodeForUser();
+            codeInDatabase = await findCodeInDB(G_code);
+        } while (codeInDatabase);
+        
+        localStorage.setItem('local_storage_userVisit_code', G_code);
+        await saveCodeToDB(G_code);
+        await updateVisitCount();
+        await fetchToShow_visit_data();
+        
+        LS_code = G_code;
+        console.log('Code generated and saved to DB');
+    } else {
+        console.log("You already visited this site before.");
+        await fetchToShow_visit_data();
     }
 }
 
@@ -339,8 +344,7 @@ function upComingFeatureAlert() {
 
 async function intro_alert(){
     alert("This site is under development phase , many new features will come soon . please visit again after some time.");
-    await getUserIp();
-    await fetch_visit_data();
+    getLocalStorageCode();
 }
 
 
