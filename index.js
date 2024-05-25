@@ -78,7 +78,7 @@ const fetchToShow_visit_data = async () => {
     try {
         const userVisitRef = database.ref('users_visit_count');
         const snapshot = await userVisitRef.once('value');
-        const userVisitCount = snapshot.val()?.visit_count || 'no data available';
+        const userVisitCount = snapshot.val()?.visit_count || '" opps! error occurred "';
         const visitDataElement = document.getElementById('site_visit_data');
         if (visitDataElement) {
             visitDataElement.innerText = userVisitCount;
