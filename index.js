@@ -1,5 +1,122 @@
-// import { initializeApp } from 'firebase/app';
-// import { getDatabase, ref, set } from 'firebase/database';
+// connecting to firebase database and handel............................
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCah_QhLAN9NtRvykp_D7IHQhKCPhzV778",
+    authDomain: "portfoliodata-1007.firebaseapp.com",
+    databaseURL: "https://portfoliodata-1007-default-rtdb.firebaseio.com",
+    projectId: "portfoliodata-1007",
+    storageBucket: "portfoliodata-1007.appspot.com",
+    messagingSenderId: "420137143564",
+    appId: "1:420137143564:web:b90a04690b3f51fdd78d29",
+    measurementId: "G-D79W4M7TK2"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+// Reference to the database
+const database = firebase.database();
+
+// Get User IP
+async function getUserIp() {
+    try {
+        const response = await fetch('https://api.ipify.org?format=json');
+        if (!response.ok) {
+            throw new Error('Network response was not ok ' + response.statusText);
+        }
+        const data = await response.json();
+        let ip = data.ip.replace(/\./g, "");
+        const User_IP = ip.slice(0, 6);
+        console.log("This is user IP:", ip);
+
+        const allIps = await get_all_ip_data_from_database();
+        await saveOrNot(User_IP, allIps);
+
+    } catch (error) {
+        console.error("Failed to fetch IP address:", error);
+    }
+}
+
+// Retrieve IP data from the database and return it
+async function get_all_ip_data_from_database() {
+    try {
+        const myMsgRef = database.ref('All_visited_user_IP');
+        const snapshot = await myMsgRef.once('value');
+        const allIps = [];
+        snapshot.forEach((childSnapshot) => {
+            const message = childSnapshot.val().User_IP;
+            allIps.push(message);
+        });
+        return allIps;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        return [];
+    }
+}
+
+// Check if IP exists and save if not
+async function saveOrNot(inputIP_Data, allIps) {
+    if (allIps.includes(inputIP_Data)) {
+        console.log("IP already exists in the database");
+    } else {
+        await saveData(inputIP_Data);
+        console.log("IP saved to the database");
+    }
+}
+
+// Save new IP
+const saveData = async (User_IP) => {
+    try {
+        const myMsgRef = database.ref('All_visited_user_IP');
+        await myMsgRef.push().set({
+            User_IP: User_IP
+        });
+        await updateVisitCount();
+    } catch (error) {
+        console.error("Error saving data:", error);
+    }
+}
+
+// Save and update user visit count
+const updateVisitCount = async () => {
+    try {
+        const userVisitRef = database.ref('users_visit_count');
+        const snapshot = await userVisitRef.once('value');
+
+        let userVisitCount = snapshot.val()?.visit_count || 0;
+        console.log(`User visit count is: ${userVisitCount}`);
+        userVisitCount += 1;
+
+        await userVisitRef.set({ visit_count: userVisitCount });
+        console.log(`User visit count is now: ${userVisitCount}`);
+    } catch (error) {
+        console.error("Error fetching or updating data in updateVisitCount:", error);
+    }
+}
+
+// Show visit data in UI
+const fetch_visit_data = async () => {
+    try {
+        const userVisitRef = database.ref('users_visit_count');
+        const snapshot = await userVisitRef.once('value');
+
+        const userVisitCount = snapshot.val()?.visit_count || 'no data available';
+
+        const visitDataElement = document.getElementById('site_visit_data');
+        if (visitDataElement) {
+            visitDataElement.innerText = userVisitCount;
+        } else {
+            console.error("Element with id 'site_visit_data' not found.");
+        }
+
+        console.log('Visit data:', userVisitCount);
+    } catch (error) {
+        console.error("Error fetching data in fetch_visit_data:", error);
+    }
+}
+
+// other Ui funcanility ...............................
+
 
 const toggleBtn = document.querySelector('.toggle_btn');
 const toggleNav = document.querySelector('.toggle_nav');
@@ -226,24 +343,12 @@ function upComingFeatureAlert() {
 
 // when open this site one alert will show
 
-function intro_alert(){
+async function intro_alert(){
     alert("This site is under development phase , many new features will come soon . please visit again after some time.");
-    getUserIp();
+    await getUserIp();
+    await fetch_visit_data();
 }
 
 
-// Get User IP
 
-async function getUserIp() {
-    try {
-        const response = await fetch('https://api.ipify.org?format=json');
-        if (!response.ok) {
-            throw new Error('Network response was not ok ' + response.statusText);
-        }
-        const data = await response.json(); 
-        const ip = data.ip; 
-        console.log("This is user IP:", ip); 
-    } catch (error) {
-        console.error("Failed to fetch IP address:", error);
-    }
-}
+
