@@ -100,12 +100,12 @@ const getLocalStorageCode = async () => {
             G_code = generateRandomCodeForUser();
             codeInDatabase = await findCodeInDB(G_code);
         } while (codeInDatabase);
-        
+
         localStorage.setItem('local_storage_userVisit_code', G_code);
         await saveCodeToDB(G_code);
         await updateVisitCount();
         await fetchToShow_visit_data();
-        
+
         LS_code = G_code;
         console.log('WELCOME "This is first time you visit my portfolio Thank you" ');
     } else {
@@ -186,8 +186,8 @@ function downloadResume() {
 // .......................profile back circle move ........................
 
 const text = document.querySelectorAll('.text_one #p_one');
-const text2 = document.querySelectorAll('.text_two #p_two'); 
-const text3 = document.querySelectorAll('.text_three #p_three'); 
+const text2 = document.querySelectorAll('.text_two #p_two');
+const text3 = document.querySelectorAll('.text_three #p_three');
 text.forEach(paragraph => {
     paragraph.innerHTML = paragraph.innerText.split('').map(
         (char, i) =>
@@ -229,7 +229,7 @@ async function loadDataAndProcess() {
     let data = await fetchJSON('./recb_img_data.json');
     let keys = Object.keys(data);
 
-    recb_sec1_input.addEventListener('change', async function() {
+    recb_sec1_input.addEventListener('change', async function () {
         if (this.checked) {
             data = await fetchJSON('./recb_event_data.json');
             keys = Object.keys(data);
@@ -245,7 +245,7 @@ async function loadDataAndProcess() {
     while (true) {
         const key = keys[i];
         const item = data[key];
-        
+
         recb_title.innerHTML = item.recb_title;
         recb_title.style.color = `#${item.heading_color}`;
         recb_title.style.textShadow = `0px 0px 25px #${item.heading_color}`;
@@ -267,21 +267,21 @@ loadDataAndProcess();
 // .........................................background blur effect .........................................
 
 function attachMouseMoveListener(profileMain, cursorBackBlurEffect) {
-    profileMain.addEventListener('mousemove', function(event) {
-      const rect = profileMain.getBoundingClientRect();
-      const mouseX = ((event.clientX - rect.left)-(cursorBackBlurEffect.offsetWidth/2));
-      const mouseY = ((event.clientY - rect.top)-(cursorBackBlurEffect.offsetHeight/2));
-      cursorBackBlurEffect.style.left = (mouseX ) + 'px';
-      cursorBackBlurEffect.style.top = (mouseY ) + 'px';
-    //   console.log('Mouse coordinates relative to main div: ', mouseX, mouseY);
-    //   console.log(cursorBackBlurEffect.offsetHeight);
+    profileMain.addEventListener('mousemove', function (event) {
+        const rect = profileMain.getBoundingClientRect();
+        const mouseX = ((event.clientX - rect.left) - (cursorBackBlurEffect.offsetWidth / 2));
+        const mouseY = ((event.clientY - rect.top) - (cursorBackBlurEffect.offsetHeight / 2));
+        cursorBackBlurEffect.style.left = (mouseX) + 'px';
+        cursorBackBlurEffect.style.top = (mouseY) + 'px';
+        //   console.log('Mouse coordinates relative to main div: ', mouseX, mouseY);
+        //   console.log(cursorBackBlurEffect.offsetHeight);
     });
 
-    cursorBackBlurEffect.addEventListener('mousemove', function(event) {
-      event.stopPropagation();
+    cursorBackBlurEffect.addEventListener('mousemove', function (event) {
+        event.stopPropagation();
     });
 }
-  
+
 const socialProfileMain = document.querySelector('.social_profile_main');
 const socialCursorBackBlurEffect = document.querySelector('.social_cursor_back_blur_effect');
 attachMouseMoveListener(socialProfileMain, socialCursorBackBlurEffect);
@@ -301,8 +301,8 @@ attachMouseMoveListener(pms_card, pms_card_back_blur_effect);
 var countDownDate = new Date();
 countDownDate.setDate(countDownDate.getDate() + 4);
 
-    // Update the countdown every 1 second
-var x = setInterval(function() {
+// Update the countdown every 1 second
+var x = setInterval(function () {
 
     // Get the current date and time
     var now = new Date().getTime();
@@ -328,7 +328,7 @@ var x = setInterval(function() {
         document.getElementById("countdown").innerHTML = "<p>EXPIRED</p>";
     }
 }, 1000);
-    
+
 // .................. OpenLinkInNewTab .......................
 
 function OpenLinkInNewTab(url) {
@@ -342,11 +342,139 @@ function upComingFeatureAlert() {
 
 // when open this site one alert will show
 
-async function intro_alert(){
+async function intro_alert() {
     alert("This site is under development phase , many new features will come soon . please visit again after some time.");
-    getLocalStorageCode();
 }
+getLocalStorageCode();
 
 
 
 
+//.................Implement Your Feedback.......................
+
+const ValidateFeedbackInput = () => {
+        const nameElement = document.getElementById('fed_input_name');
+        nameElement.addEventListener('input', (e) => {
+            const namePattern = /[^a-zA-Z ]/.test(e.target.value);
+            if (e.target.value.trim() === "") {
+                document.getElementById('fed_input_name_error').innerHTML = 'This is not a valid name';
+            } else if (namePattern) {
+                document.getElementById('fed_input_name_error').innerHTML = 'This is not a valid name';
+            } else {
+                document.getElementById('fed_input_name_error').innerHTML = '';
+            }
+        });
+    
+        const emailElement = document.getElementById('fed_input_email');
+        emailElement.addEventListener('input', (e) => {
+            const emailPattern = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+(com|COM)$/.test(e.target.value.trim());
+            if (e.target.value === "") {
+                document.getElementById('fed_input_email_error').innerHTML = 'Please enter valid email address';
+            } else if (emailPattern) {
+                document.getElementById('fed_input_email_error').innerHTML = '';
+            } else {
+                document.getElementById('fed_input_email_error').innerHTML = 'Please enter valid email address';
+            }
+        });
+        const messageElement = document.getElementById('fed_input_message');
+        messageElement.addEventListener('input', (e) => {
+            if (e.target.value === "") {
+                document.getElementById('fed_input_message_error').innerHTML = 'Enter your message, it cannot be null';
+
+            } else {
+                document.getElementById('fed_input_message_error').innerHTML = '';
+
+            }
+        });
+}
+ValidateFeedbackInput();
+
+const FeedBackFromSubmit = async() => {
+    const error_name = document.getElementById('fed_input_name_error').innerHTML.length === 0;
+    const error_email = document.getElementById('fed_input_email_error').innerHTML.length === 0;
+    const error_message = document.getElementById('fed_input_message_error').innerHTML.length === 0;
+    const name_value = document.getElementById('fed_input_name').value;
+    const email_value = document.getElementById('fed_input_email').value;
+    const message_value = document.getElementById('fed_input_message').value;
+    const checkNullInput = name_value!=''&&email_value!=''&&message_value!='';
+
+    if(error_name&&error_email&&error_message&&checkNullInput){
+        try {
+            const myMsgRef = database.ref('User_FeedBack_Data');
+            await myMsgRef.push().set({
+                Name : name_value,
+                Email : email_value,
+                Message : message_value
+            });
+
+
+
+            document.querySelector('.non_submit_animation').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('.non_submit_animation').style.display = 'none';
+            }, 5000);
+
+        } catch (error) {
+            console.error("Error saving data:", error);
+            document.querySelector('.non_error_animation').style.display = 'block';
+            setTimeout(() => {
+                document.querySelector('.non_error_animation').style.display = 'none';
+            }, 3000);
+        }
+    }else{
+        document.querySelector('.non_error_animation').style.display = 'block';
+        setTimeout(() => {
+            document.querySelector('.non_error_animation').style.display = 'none';
+        }, 3000);
+    }
+    document.getElementById('feedback_form_org').reset();
+};
+
+
+// const sendMail = async (email,name)=>{
+
+//   try {
+
+//     const transporter = nodemailer.createTransport({
+//       service: 'gmail',
+//       auth: {
+//         user: 'company@gmail.com',
+//         pass: 'company password',
+//       }
+//     });
+//     const mailOptions = {
+//       from: 'company@gmail.com',
+//       to: email,
+//       subject: `Thank You for Your Feedback, ${name} 😊- Regards, Vishal`,
+//       text: `
+//       Dear ${name},
+
+//       Thank you for taking the time to provide feedback on my portfolio. I have received your message and appreciate your input.👍
+      
+//       We will review your comments carefully and will get back to you as soon as possible with a response. Your feedback is valuable to me, and it helps in improving my work.💡
+      
+//       If you have any further questions or need immediate assistance, please do not hesitate to contact me.
+      
+//       Thank you once again for your support and understanding.
+//       Visit again , Have a great day!
+
+//       Best regards,
+//       Vishal Kumar
+//       Software Developer📧
+//       `,
+//     };
+    
+//     transporter.sendMail(mailOptions, (error, info) => {
+//       if (error) {
+//         console.log(error);
+//         res.status(401).json({ message: "Username and Password not accepted",success:false});
+//       } else {
+//         console.log(`Email sent: ${info.response}`);
+//         res.status(201).json({ message: "Email successfully send",success:true});
+//       }
+//     });
+//   } catch (error) {
+//     console.error(error);
+//     res.status(500).json({ message: "Server error", success: false });
+//   }
+// }

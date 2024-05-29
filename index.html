@@ -109,8 +109,10 @@
                                 <ul>
                                     <li id="heading"><span id="">Find joy</span> in defending
                                         rather than taking it easy.</li>
-                                    <li id="paragraph">I am a software developer with a passion for creating innovative solutions.
-                                        It is a pleasure to have you visit my site. The number of visitors to my portfolio is <span id="site_visit_data">...loading</span>.
+                                    <li id="paragraph">I am a software developer with a passion for creating innovative
+                                        solutions.
+                                        It is a pleasure to have you visit my site. The number of visitors to my
+                                        portfolio is <span id="site_visit_data">...loading</span>.
                                     </li>
                                 </ul>
                             </div>
@@ -518,7 +520,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/instagram_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/instagram_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -620,7 +623,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/snapchat_icon.svg" alt="Social icon">
+                                                                <img src="./img/social_icon/snapchat_icon.svg"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -647,7 +651,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/snapchat_icon.svg" alt="Social icon">
+                                                                <img src="./img/social_icon/snapchat_icon.svg"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -779,7 +784,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/messenger_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/messenger_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -947,7 +953,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/facebook_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/facebook_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -1049,7 +1056,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/gmail_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/gmail_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -1076,7 +1084,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/github_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/github_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -1207,7 +1216,8 @@
                                                     <div class="sdr_card">
                                                         <div class="sdr_card_contain">
                                                             <div class="sdr_card_icon">
-                                                                <img src="./img/social_icon/gmail_icon.png" alt="Social icon">
+                                                                <img src="./img/social_icon/gmail_icon.png"
+                                                                    alt="Social icon">
                                                             </div>
                                                             <div class="sdr_card_title">DOUBLICATE</div>
                                                             <div class="sdr_card_view_btn">
@@ -1563,28 +1573,86 @@
                                             <div class="form_sec_name">
                                                 <label id="fed_label">Name</label>
                                                 <input id="fed_input_name" type="name" name="name">
+                                                <span id="fed_input_name_error"></span>
                                             </div>
                                             <div class="form_sec_email">
                                                 <label id="fed_label">Email</label>
                                                 <input id="fed_input_email" type="email" name="email">
+                                                <span id="fed_input_email_error"></span>
                                             </div>
                                             <div class="form_sec_message">
                                                 <label id="fed_label">Message</label>
                                                 <input id="fed_input_message" type="message" name="message">
+                                                <span id="fed_input_message_error"></span>
                                                 <!-- <textarea id="w3review" name="w3review" rows="2" cols="50"></textarea> -->
                                             </div>
                                             <div class="form_sec_submit_btn">
-                                                <input type="submit" name="submit" value="Send" id="fss_btn"
-                                                    onclick="upComingFeatureAlert()">
+                                                <div class="input_bg_effect_submit">
+                                                    <input type="button" name="submit" value="Send" id="fss_btn" onclick="FeedBackFromSubmit()">
+                                                </div>
                                             </div>
-                                        </form>
+                                            <div class="non_submit_animation">
+                                                <div class="submit_alert" id="submit_alert_div">
+                                                    <div class="submit_alert_center">
+                                                        <div class="submit_alert">
+                                                            <div class="submit_alert_center">
+                                                                <svg version="1.1" id="Layer_1"
+                                                                    xmlns="http://www.w3.org/2000/svg"
+                                                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                                    xml:space="preserve" viewBox="40 40 230 230">
+                                                                    <path class="circle" stroke="#1C9943"
+                                                                        stroke-width="10" fill="#fff" fill-opacity="0"
+                                                                        stroke-miterlimit="10" d="M150,47.9c18.4,0,35.4,4.6,51,13.8s28,21.6,37.2,37.2s13.8,32.6,13.8,51s-4.6,35.4-13.8,51s-21.6,28-37.2,37.2
+                                                                             s-32.6,13.8-51,13.8s-35.4-4.6-51-13.8s-28-21.6-37.2-37.2s-13.8-32.6-13.8-51s4.6-35.4,13.8-51s21.6-28,37.2-37.2
+                                                                             S131.7,47.9,150,47.9z" />
+                                                                    <path class="tick" cx="0" cy="0" r="1" opacity="1"
+                                                                        fill="#1C9943" stroke="" stroke-width="10"
+                                                                        d="M208.4,118.6c0.8-0.8,1.2-1.9,1.2-3.3c0-1.4-0.4-2.6-1.2-3.7l-3.7-3.3c-0.8-1.1-1.9-1.6-3.3-1.6
+                                                                             s-2.6,0.4-3.7,1.2l-67,67l-28.4-28.8c-1.1-0.8-2.3-1.2-3.7-1.2c-1.4,0-2.5,0.4-3.3,1.2l-3.7,3.3c-0.8,1.1-1.2,2.3-1.2,3.7
+                                                                             s0.4,2.5,1.2,3.3l35.4,35.8c1.1,1.1,2.3,1.6,3.7,1.6c1.4,0,2.5-0.5,3.3-1.6L208.4,118.6z" />
+                                                                </svg>
+                                                                <div class="msg_done"><span id="thankmag">Thank
+                                                                        You</span>
+                                                                    <span id="mailmsg">we got your feedback Please check
+                                                                        your Gmail</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="non_error_animation">
+                                                <div class="error_alert" id="error_alert_div">
+                                                    <div class="error_alert_center">
+                                                        <div class="error_alert">
+                                                            <div class="error_alert_center">
+                                                                <div class="error_clx">
+                                                                    <div class="circle-error-border"></div>
+                                                                    <div class="circle_error">
+                                                                        <div class="error"></div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="msg_error">
+                                                                    <span id="thankmag">Opps</span>
+                                                                    <span id="errormailmsg">Incorrect Input or Server
+                                                                        error</span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                     </div>
+                                    </form>
                                 </div>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script> -->
