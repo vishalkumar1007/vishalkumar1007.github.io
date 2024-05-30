@@ -1012,9 +1012,7 @@ li {
   filter: blur(24px);
   position: relative;
 }
-.right_projects_top {
-  /* background-color: #680144; */
-}
+
 .right_projects_bottom {
   /* background-color: #8c8c8c; */
   /* height: 60%; */
@@ -2038,9 +2036,6 @@ li {
   /* background-color: rgb(132, 120, 96); */
 }
 
-.right_contact_top {
-  /* background-color: #322c5a; */
-}
 
 .right_contact_bottom {
   height: 688px;

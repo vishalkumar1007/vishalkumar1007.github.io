@@ -1,3 +1,8 @@
+// remove inspect element
+document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+});
+
 // connecting to firebase database and handel............................
 
 const firebaseConfig = {
