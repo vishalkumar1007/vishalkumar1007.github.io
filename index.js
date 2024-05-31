@@ -1,7 +1,8 @@
+// import Email from 'some-email-library';
 // remove inspect element
-document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-});
+// document.addEventListener('contextmenu', function(e) {
+//     e.preventDefault();
+// });
 
 // connecting to firebase database and handel............................
 
@@ -412,12 +413,12 @@ const FeedBackFromSubmit = async() => {
                 Message : message_value
             });
 
-
+            await sendMail(email_value,name_value);
 
             document.querySelector('.non_submit_animation').style.display = 'block';
             setTimeout(() => {
                 document.querySelector('.non_submit_animation').style.display = 'none';
-            }, 5000);
+            }, 7000);
 
         } catch (error) {
             console.error("Error saving data:", error);
@@ -436,50 +437,35 @@ const FeedBackFromSubmit = async() => {
 };
 
 
-// const sendMail = async (email,name)=>{
+const sendMail = async (email, name) => {
+    const mailApiUrl = "https://email-sender-api-five.vercel.app/api/sendMailFromVishalServer";
 
-//   try {
+    const postData = {
+        email: email,
+        name:name
+    };
 
-//     const transporter = nodemailer.createTransport({
-//       service: 'gmail',
-//       auth: {
-//         user: 'company@gmail.com',
-//         pass: 'company password',
-//       }
-//     });
-//     const mailOptions = {
-//       from: 'company@gmail.com',
-//       to: email,
-//       subject: `Thank You for Your Feedback, ${name} 😊- Regards, Vishal`,
-//       text: `
-//       Dear ${name},
-
-//       Thank you for taking the time to provide feedback on my portfolio. I have received your message and appreciate your input.👍
-      
-//       We will review your comments carefully and will get back to you as soon as possible with a response. Your feedback is valuable to me, and it helps in improving my work.💡
-      
-//       If you have any further questions or need immediate assistance, please do not hesitate to contact me.
-      
-//       Thank you once again for your support and understanding.
-//       Visit again , Have a great day!
-
-//       Best regards,
-//       Vishal Kumar
-//       Software Developer📧
-//       `,
-//     };
-    
-//     transporter.sendMail(mailOptions, (error, info) => {
-//       if (error) {
-//         console.log(error);
-//         res.status(401).json({ message: "Username and Password not accepted",success:false});
-//       } else {
-//         console.log(`Email sent: ${info.response}`);
-//         res.status(201).json({ message: "Email successfully send",success:true});
-//       }
-//     });
-//   } catch (error) {
-//     console.error(error);
-//     res.status(500).json({ message: "Server error", success: false });
-//   }
-// }
+    // Options for the fetch request
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(postData),
+    };
+    fetch(mailApiUrl, options)
+    .then((response) => response.json())
+    .then((data) => {
+        // Process the response data from the API
+        if (data.message == "Email successfully send" && data.success == true) {
+            console.log("mail send");
+        }
+        else if(data.message == "Server error" && data.success == false){
+            console.log("internal server error on email send");
+        }
+    })
+    .catch((error) => {
+        console.error("Error fetching data:", error);
+        alert("Server Error");
+    });
+};
