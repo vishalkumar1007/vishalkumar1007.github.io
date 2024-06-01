@@ -1,8 +1,8 @@
 // import Email from 'some-email-library';
 // remove inspect element
-// document.addEventListener('contextmenu', function(e) {
-//     e.preventDefault();
-// });
+document.addEventListener('contextmenu', (e)=> {
+    e.preventDefault();
+});
 
 // connecting to firebase database and handel............................
 
@@ -444,7 +444,8 @@ const sendMail = async (email, name) => {
         email: email,
         name:name
     };
-
+  
+inspact
     // Options for the fetch request
     const options = {
         method: "POST",
