@@ -444,8 +444,7 @@ const sendMail = async (email, name) => {
         email: email,
         name:name
     };
-  
-inspact
+
     // Options for the fetch request
     const options = {
         method: "POST",
