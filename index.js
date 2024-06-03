@@ -469,3 +469,26 @@ const sendMail = async (email, name) => {
         alert("Server Error");
     });
 };
+
+
+// ..................... Open Gmail in APP if user in mobile 
+
+
+function isMobile() {
+    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    return /android|iPhone|iPad|iPod/i.test(userAgent);
+}
+
+function openGmail() {
+    if (isMobile()) {
+        // Attempt to open the Gmail app on Android
+        window.location.href = 'intent://mail/#Intent;scheme=https;package=com.google.android.gm;end';
+        // If the above fails, fallback to Gmail web (a timeout can be set to handle fallback gracefully)
+        setTimeout(() => {
+            window.location.href = 'https://mail.google.com/';
+        }, 2000); // Adjust timeout duration if necessary
+    } else {
+        // Open Gmail web page on desktop
+        window.location.href = 'https://mail.google.com/';
+    }
+}
