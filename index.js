@@ -484,11 +484,8 @@ function openGmail() {
         // Attempt to open the Gmail app on Android
         window.location.href = 'intent://mail/#Intent;scheme=https;package=com.google.android.gm;end';
         // If the above fails, fallback to Gmail web (a timeout can be set to handle fallback gracefully)
-        setTimeout(() => {
-            window.location.href = 'https://mail.google.com/';
-        }, 2000); // Adjust timeout duration if necessary
     } else {
         // Open Gmail web page on desktop
-        window.location.href = 'https://mail.google.com/';
+        window.location.href = 'https://gmail.google.com/';
     }
 }
