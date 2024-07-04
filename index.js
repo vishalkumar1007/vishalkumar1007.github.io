@@ -1,8 +1,8 @@
 // import Email from 'some-email-library';
 // remove inspect element
-document.addEventListener('contextmenu', (e)=> {
-    e.preventDefault();
-});
+// document.addEventListener('contextmenu', (e)=> {
+//     e.preventDefault();
+// });
 
 // connecting to firebase database and handel............................
 
@@ -117,6 +117,7 @@ const getLocalStorageCode = async () => {
     } else {
         console.log('WELCOME AGAIN "You already visited my portfolio before" ');
         await fetchToShow_visit_data();
+        OpenLinkInNewTab('https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?wt.mc_id=studentamb_396769'); // DELETE PART
     }
 }
 
@@ -338,7 +339,7 @@ var x = setInterval(function () {
 // .................. OpenLinkInNewTab .......................
 
 function OpenLinkInNewTab(url) {
-    window.open(url, '_blank');
+    window.open(url, '_blank').focus();
 }
 
 // .................. upComingFeatureAlert .......................
@@ -349,8 +350,12 @@ function upComingFeatureAlert() {
 // when open this site one alert will show
 
 async function intro_alert() {
-    alert("This site is under development phase , many new features will come soon . please visit again after some time.");
+    alert("site is under development, features adding soon . please visit again after some time. we are going to redirect you on free course section on Microsoft website");
+    // OpenLinkInNewTab('https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?wt.mc_id=studentamb_396769');
 }
+
+
+
 getLocalStorageCode();
 
 
