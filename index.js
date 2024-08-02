@@ -350,7 +350,7 @@ function upComingFeatureAlert() {
 // when open this site one alert will show
 
 async function intro_alert() {
-    alert("site is under development, features adding soon . please visit again after some time. we are going to redirect you on free course section on Microsoft website");
+    alert("site is under development, features adding soon . please visit again after some time");
     // OpenLinkInNewTab('https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?wt.mc_id=studentamb_396769');
 }
 
