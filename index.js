@@ -117,7 +117,7 @@ const getLocalStorageCode = async () => {
     } else {
         console.log('WELCOME AGAIN "You already visited my portfolio before" ');
         await fetchToShow_visit_data();
-        OpenLinkInNewTab('https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?wt.mc_id=studentamb_396769'); // DELETE PART
+        // OpenLinkInNewTab('https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/?wt.mc_id=studentamb_396769'); // DELETE PART
     }
 }
 
@@ -318,7 +318,7 @@ var x = setInterval(function () {
     var distance = countDownDate - now;
 
     // Calculate days, hours, minutes and seconds
-    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var days = Math.floor(distance / (70 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
     var seconds = Math.floor((distance % (1000 * 60)) / 1000);

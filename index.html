@@ -22,7 +22,7 @@
     <!-- Firebase Database -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
     <!-- smtp email  -->
-    
+
     <title>Vishal Portfolio</title>
     <!-- <link id="lightMode" rel="stylesheet" href="./index.light.css"> -->
     <link rel="stylesheet" href="./index_dark.css">
@@ -45,7 +45,15 @@
                         <li><a href="#Home">Home</a></li>
                         <li id="about"><a href="#About">About</a></li>
                         <li><a href="#profiles">Profile</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li id="live_nav">
+                            <div class="livenow" id="livenow_nav">
+                                <div style="width: 1px; height: 1px;"></div>
+                                <div style="width: 1px; height: 1px;"></div>
+                                <div style="width: 1px; height: 1px;"></div>
+                                <div style="width: 1px; height: 1px;"></div>
+                            </div>
+                            <a href="#contact">Contact</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="darkmode">
@@ -150,8 +158,8 @@
                                 <p id="p1">About</p>
                             </div>
                             <div class="info_about">
-                                <p id="p2" style="color: #3cb44e;">Just try something different</p>
-                                <p id="p2l">In code box you able to see my information with good view experience</p>
+                                <p id="p2" style="color: #3cb44e;">Passionate Software Developer</p>
+                                <p id="p2l">Just Love Your Work Your Work Will Live Your Dream </p>
                             </div>
                         </div>
                     </div>
@@ -493,7 +501,7 @@
                         </div>
                         <div class="info_about ">
 
-                            <p id="p2" style="color: #d43c8b;">Network show communication skills</p>
+                            <p id="p2" style="color: #d43c8b;">Networks , show communication skills</p>
                             <p id="p2l">having knowledge is good but without network waste</p>
                         </div>
                     </div>
@@ -1469,7 +1477,7 @@
                         </div>
                         <div class="info_about ">
                             <p id="p2" style="color: #68a900;">Build you thought using code</p>
-                            <p id="p2l">This help to show your skills and creativeness also it prove you have knowledge
+                            <p id="p2l">This help to show your skills and creativeness
                             </p>
                         </div>
                     </div>
@@ -1546,9 +1554,9 @@
                                         </div>
                                         <div class="contact_gmail_div">
                                             <div class="cg_title">Developer</div>
-                                            <div class="cg_logo" >
-                                                <!-- <img src="./img//event_and_certificate_photo_db/1709748920947-01_event_7.jpeg.jpg" alt=""> -->
-                                                 <!-- <div class="ch_cglogo">Connect</div> -->
+                                            <div class="cg_logo">
+                                                <img src="./img/my-image-feedback.jpg" alt="">
+                                                <!-- <div class="ch_cglogo">Connect</div> -->
                                             </div>
                                             <div class="cg_name">Vishal kumar</div>
 
@@ -1571,6 +1579,15 @@
                                     <div class="feedback_form">
                                         <div class="feedback_heading">
                                             <h1 id="feedback_h1">Your Feedback</h1>
+                                            <div class="LiveSection">
+                                                <div class="livenow">
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                    <div></div>
+                                                </div>
+                                                <p class="LiveText">Live</p>
+                                            </div>
                                         </div>
                                         <form action="" id="feedback_form_org">
                                             <div class="form_sec_name">
@@ -1591,7 +1608,8 @@
                                             </div>
                                             <div class="form_sec_submit_btn">
                                                 <div class="input_bg_effect_submit">
-                                                    <input type="button" name="submit" value="Send" id="fss_btn" onclick="FeedBackFromSubmit()">
+                                                    <input type="button" name="submit" value="Send" id="fss_btn"
+                                                        onclick="FeedBackFromSubmit()">
                                                 </div>
                                             </div>
                                             <div class="non_submit_animation">
@@ -1616,8 +1634,10 @@
                                                                 </svg>
                                                                 <div class="msg_done"><span id="thankmag">Thank
                                                                         You</span>
-                                                                    <span id="mailmsg">we got your feedback <span  style="color: #d92967d2; cursor: pointer;" onclick="openGmail()" > <b>Please check
-                                                                        your Gmail </b></span></span>
+                                                                    <span id="mailmsg">we got your feedback <span
+                                                                            style="color: #d92967d2; cursor: pointer;"
+                                                                            onclick="openGmail()"> <b>Please check
+                                                                                your Gmail </b></span></span>
                                                                 </div>
                                                             </div>
                                                         </div>
