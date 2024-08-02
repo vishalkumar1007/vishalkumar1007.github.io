@@ -1,8 +1,8 @@
 // import Email from 'some-email-library';
 // remove inspect element
-document.addEventListener('contextmenu', (e)=> {
-    e.preventDefault();
-});
+// document.addEventListener('contextmenu', (e)=> {
+//     e.preventDefault();
+// });
 
 // connecting to firebase database and handel............................
 
