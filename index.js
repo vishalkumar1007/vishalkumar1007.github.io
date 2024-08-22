@@ -347,6 +347,8 @@ function upComingFeatureAlert() {
     alert("This feature is coming soon");
 }
 
+
+
 // when open this site one alert will show
 
 async function intro_alert() {
