@@ -530,7 +530,7 @@ li {
 .about_bottom_my_self {
   /* background-color: #d32894; */
   width: 30%;
-  height: 50%;
+  height: 55%;
   position: absolute;
   bottom: 18%;
   right: 10%;
@@ -556,7 +556,7 @@ li {
 .card_image {
   /* background-color: #8401a5; */
   width: 100%;
-  height: 45%;
+  height: 50%;
   overflow: hidden;
   box-sizing: border-box;
   display: flex;
@@ -565,8 +565,8 @@ li {
 }
 
 .card_image img {
-  width: 75%;
-  height: 150%;
+  width: 95%;
+  height: 123%;
   top: 0;
   transition: 0.5s;
   /* pointer-events: none; */
@@ -576,8 +576,9 @@ li {
   transform: rotate3d(0.5, 0, 0, -7deg);
 }
 .content-box {
+  /* background-color: red; */
   width: 100%;
-  height: 56%;
+  height: 45%;
   border-radius: 0px 0px 10px 10px;
   transition: all 0.5s ease-in-out;
   padding: 11% 7% 7% 7%;
@@ -637,7 +638,7 @@ li {
 .name-box {
   border-radius: 9px;
   position: absolute;
-  top: 40%;
+  top: 45%;
   left: 23%;
   height: 10%;
   width: 50%;
@@ -1769,6 +1770,7 @@ li {
   /* overflow: none; */
   position: relative;
   /* padding-left: 10px; */
+  /* padding-bottom: 10px; */
 }
 .social_data_right_angle_scroll {
   /* background-color: #682222; */
@@ -3424,7 +3426,7 @@ svg {
   }
   .about_bottom_my_self {
     /* background-color: #cb0482; */
-    width: 60%;
+    width: 100%;
     height: 40%;
     position: absolute;
     bottom: 0%;
@@ -3432,18 +3434,25 @@ svg {
     /* flex-wrap: wrap; */
   }
   .card_image {
+    /* background-color: red; */
     width: 100%;
-    height: 45%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    min-width: 330px;
   }
   .content-box {
     /* background-color: #8e0000; */
     width: 100%;
-    height: 50%;
+    height: 45%;
     box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
   }
   .card_image img {
-    width: 75%;
-    height: 150%;
+    width: 90%;
+    height: 122%;
     transition: 0.5s;
   }
   .content-box .card-content {
@@ -3783,6 +3792,13 @@ svg {
   .sdr_btn span {
     font-size: 14px;
   }
+  .name-box {
+    border-radius: 9px;
+    position: absolute;
+    top: 48%;
+    left: 23%;
+        /* background-color: #6f005d; */
+  }
 }
 @media screen and (max-width: 750px) {
   .scroll_div {
@@ -3893,19 +3909,25 @@ svg {
   }
   .card_image {
     width: 100%;
-    height: 45%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 280px;
   }
   .content-box {
     /* background-color: #8e0000; */
     width: 100%;
-    height: 50%;
+    height: 45%;
     box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
   }
-  .card_image img {
+  /* .card_image img {
     width: 75%;
     height: 150%;
     transition: 0.5s;
-  }
+  } */
   .content-box .card-content {
     font-size: 13px;
   }
@@ -4114,6 +4136,7 @@ svg {
     font-size: 9px;
     color: #8b949e;
   }
+  
 }
 @media screen and (max-width: 730px) {
   .about {
@@ -4803,6 +4826,7 @@ svg {
   .skill_miscellaneous_full_occupied::before {
     filter: blur(100px);
   }
+  
   /* ...........feedback........... */
   .feedback_sec {
     /* background-color: rgb(205, 126, 203); */
@@ -5097,6 +5121,32 @@ svg {
     letter-spacing: -0.03em !important;
     font-weight: 800 !important;
   }
+
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 38%;
+    position: absolute;
+    bottom: 120px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 260px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
+  }
 }
 @media screen and (max-width: 515px) {
   .movable_background {
@@ -5117,6 +5167,31 @@ svg {
     margin-top: 9%;
     /* background-color: red; */
   }
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 37%;
+    position: absolute;
+    bottom: 130px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 255px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
+  }
 }
 @media screen and (max-width: 490px) {
   .movable_background {
@@ -5136,6 +5211,31 @@ svg {
     height: 73.5%;
     margin-top: 9%;
     /* background-color: green; */
+  }
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    bottom: 90px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 240px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
   }
 }
 @media screen and (max-width: 490px) {
@@ -5501,6 +5601,10 @@ svg {
     height: 39%;
     margin-top: 0px;
   }
+  .social_data{
+    /* background-color: red; */
+    /* padding-bottom: 10px; */
+  }
   .social_data_left {
     /* background-color: #0832b1; */
     height: 32%;
@@ -5528,6 +5632,7 @@ svg {
     padding-right: 20px;
     width: 100%;
     height: 171%;
+    /* height: 370px; */
     top: -28px;
     left: 0px;
     rotate: 0deg;
@@ -5542,6 +5647,7 @@ svg {
     /* gap: 14px; */
     margin: 36px 0px;
     /* padding-left: 5px; */
+    padding-bottom: 10px;
   }
   .sdro_section_1 {
     gap: 14px;
@@ -5557,7 +5663,7 @@ svg {
     background-color: #131521;
     /* background-color: rgb(61, 7, 7); */
     width: 100%;
-    height: 160px;
+    height: 155px;
     overflow: hidden;
   }
   .sdr_card_icon {
@@ -5769,6 +5875,31 @@ svg {
     background-color: #21262d;
     font-size: 7px;
     color: #8b949e;
+  }
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    bottom: 80px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 52%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 195px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 47%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
   }
 }
 @media screen and (max-width: 448px) {
@@ -5992,7 +6123,14 @@ svg {
   }
 
   /* ................... profile card ...............  */
-
+  .social_data{
+    /* background-color: pink; */
+    min-width: 220px;
+  }
+  .coding_profile_main{
+    
+    min-width: 220px;
+  }
   .social_data_right_angle_scroll {
     /* background-color: rgb(104, 34, 34); */
     padding-right: 20px;
@@ -6319,6 +6457,31 @@ svg {
     z-index: -1;
     filter: blur(25px);
   }
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 40%;
+    position: absolute;
+    bottom: 60px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 160px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
+  }
 }
 @media screen and (max-width: 352px) {
   .movable_background {
@@ -6463,6 +6626,31 @@ svg {
   }
   .sdr_btn span {
     font-size: 9px;
+  }
+  .about_bottom_my_self {
+    /* background-color: #cb0482; */
+    width: 60%;
+    height: 36%;
+    position: absolute;
+    bottom: 120px;
+    right: 19%;
+    /* flex-wrap: wrap; */
+  }
+  .card_image {
+    width: 100%;
+    height: 55%;
+  }
+  .card_image img{
+    /* background-color: darkcyan; */
+    width: 100%;
+    height: 120%;
+    min-width: 130px;
+  }
+  .content-box {
+    /* background-color: #8e0000; */
+    width: 100%;
+    height: 45%;
+    box-shadow: rgba(0, 255, 89, 0.864) 0px 0px 20px -10px;
   }
 }
 @media screen and (max-width: 290px) {
