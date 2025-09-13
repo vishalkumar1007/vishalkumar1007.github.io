@@ -160,7 +160,7 @@ toggle_nav_close.addEventListener('click', () => {
 
 function downloadResume() {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/file/d/1dsUGt9Sl6UNVsSCfiojXxtxuMtfAVLMK/view?usp=sharing';
+    link.href = 'https://drive.google.com/file/d/1xM6h45q8XtqsJA3LQ_RKh9NpE5c4yfRO/view?usp=sharing';
     link.download = 'resume.pdf';
     document.body.appendChild(link);
     link.click();
