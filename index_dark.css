@@ -38,14 +38,20 @@ header {
 
 .nav {
   /* background-color: greenyellow; */
+  background-color: rgba(63, 63, 63, 0.134);
+  width: 95%;
   backdrop-filter: blur(40px);
-  width: calc(100%-20px);
-  height: auto;
+  /* width: calc(100%-20px); */
+  height: 60px;
   padding: 15px 10px 15px 10px;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   z-index: 1;
+  justify-self: center;
+  margin-top: 10px;
+  border-radius: 18px;
+  border: 1px solid rgba(143, 143, 143, 0.122);
 }
 .floatingNav {
   width: 100%;
@@ -2019,9 +2025,9 @@ li {
   /* margin-bottom: 200px; */
 }
 .line_contact {
-  background: linear-gradient(#b6103d, #b6103cec, #b6103ce4, #b6103cbb 130%);
+  background: linear-gradient(#b6103d, #b6103cec, #870a2b18, #000000 140%);
   width: 2%;
-  height: 100%;
+  height: 120%;
 }
 .line_icon_8 {
   background-color: #b6103d;
@@ -5601,10 +5607,6 @@ svg {
     height: 39%;
     margin-top: 0px;
   }
-  .social_data{
-    /* background-color: red; */
-    /* padding-bottom: 10px; */
-  }
   .social_data_left {
     /* background-color: #0832b1; */
     height: 32%;
@@ -6860,5 +6862,89 @@ svg {
     width: 100%;
     /* height: 400px; */
     margin: 0 auto;
+  }
+}
+
+/* ....................... Footer ................  */
+.footer {
+  background-color: #060817;
+  width: 100%;
+  border-top: 1px solid rgba(128, 128, 128, 0.081);
+  margin-top: 80px;
+  padding: 30px 0;
+}
+
+.footer_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.footer_copyright {
+  color: #ffffff49;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer_copyright p {
+  margin: 0;
+}
+
+.footer_divider {
+  width: 1px;
+  height: 20px;
+  background-color: rgba(128, 128, 128, 0.3);
+  display: none;
+}
+
+.footer_made_with {
+  color: #ffffff49;
+  font-size: 14px;
+  text-align: center;
+}
+
+.footer_made_with p {
+  margin: 0;
+}
+
+.footer_made_with .heart {
+  color: #d43c8abb;
+  display: inline-block;
+}
+
+/* Footer Responsive */
+@media screen and (min-width: 768px) {
+  .footer_divider {
+    display: block;
+  }
+  
+  .footer_content {
+    gap: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 25px 0;
+    margin-top: 60px;
+  }
+  
+  .footer_copyright,
+  .footer_made_with {
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .footer_divider {
+    display: none;
   }
 }

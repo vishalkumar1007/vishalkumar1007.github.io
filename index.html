@@ -1648,11 +1648,31 @@
                     </div>
                 </div>
             </div>
+            <footer class="footer">
+                <div class="footer_container">
+                    <div class="footer_content">
+                        <div class="footer_copyright">
+                            <p>&copy; <span id="currentYear"></span> Vishal Kumar. All rights reserved.</p>
+                        </div>
+                        <div class="footer_divider"></div>
+                        <div class="footer_made_with">
+                            <p>Made with <span class="heart">❤️</span> using HTML, CSS & JavaScript</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </div>
         </div>
+
     </main>
 
+
+
     <script src="./index.js" async></script>
+    <script>
+        // Set current year
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
