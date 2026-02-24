@@ -49,7 +49,7 @@ const Achievements = () => {
 
   const highlights = [
     {
-      title: '250+ DSA Problems',
+      title: '150+ DSA Problems',
       description: 'Solved on LeetCode, GeeksforGeeks & more',
       icon: Code2,
       stat: 'Problem Solver',

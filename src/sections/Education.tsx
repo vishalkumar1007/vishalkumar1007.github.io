@@ -86,7 +86,7 @@ const Education = () => {
 
   const stats = [
     { label: 'CGPA', value: '7.8', icon: Award },
-    { label: 'DSA Problems', value: '250+', icon: Code2 },
+    { label: 'DSA Problems', value: '150+', icon: Code2 },
     { label: 'Projects', value: '10+', icon: BookOpen },
     { label: 'Hackathons', value: 'Top 20', icon: Trophy },
   ];

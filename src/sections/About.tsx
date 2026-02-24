@@ -297,7 +297,7 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Code2, value: '250+', label: 'DSA Problems Solved' },
+    { icon: Code2, value: '150+', label: 'DSA Problems Solved' },
     { icon: Server, value: '10+', label: 'Projects Built' },
     { icon: Target, value: '7.8', label: 'CGPA' },
     { icon: Shield, value: '2+', label: 'Years Experience' },
