@@ -4,15 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'src/**'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'vite.config.ts'
-      - 'tsconfig.json'
-      - 'tailwind.config.js'
-      - 'postcss.config.js'
-      - 'index.html'
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
