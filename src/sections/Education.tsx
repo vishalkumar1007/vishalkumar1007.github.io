@@ -85,8 +85,8 @@ const Education = () => {
   }, []);
 
   const stats = [
-    { label: 'CGPA', value: '7.8', icon: Award },
-    { label: 'DSA Problems', value: '250+', icon: Code2 },
+    { label: 'CGPA', value: '8.2', icon: Award },
+    { label: 'DSA Problems', value: '100+', icon: Code2 },
     { label: 'Projects', value: '10+', icon: BookOpen },
     { label: 'Hackathons', value: 'Top 20', icon: Trophy },
   ];
@@ -178,7 +178,7 @@ const Education = () => {
                   </div>
                   <div className="flex items-center gap-2 px-4 py-2 bg-red-500/10 border border-red-500/30 rounded-full">
                     <Award className="w-4 h-4 text-red-400" />
-                    <span className="text-sm text-red-400 font-semibold">CGPA: 7.8</span>
+                    <span className="text-sm text-red-400 font-semibold">CGPA: 8.2</span>
                   </div>
                 </div>
 

@@ -174,9 +174,9 @@ const Hero = () => {
   )), []);
 
   const stats = [
-    { value: '250+', label: 'DSA Problems Solved' },
-    { value: '2+', label: 'Years Experience' },
-    { value: '7.8', label: 'CGPA' },
+    { value: '150+', label: 'DSA Problems Solved' },
+    { value: '1+', label: 'Years Experience' },
+    { value: '8.2', label: 'CGPA' },
   ];
 
   return (
