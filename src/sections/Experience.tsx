@@ -12,10 +12,25 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      role: 'Software Developer',
+      company: 'Inpiron Technologies',
+      location: 'Bangalore, India',
+      period: 'Feb 2026 - Present',
+      type: 'Full-time',
+      description: 'Working on Client Projects, Using Technologies like Go , Docker, Kubernetes, GitLab CI/CD, ',
+      achievements: [
+        'Contributed to development of scalable microservices using Go.',
+      ],
+      skills: ['Go', 'Docker', 'Kafka', 'GitLab CI/CD'],
+      icon: Shield,
+      color: 'green',
+    },
+    {
+      id: 2,
       role: 'Associate Software Developer',
       company: 'InstaSafe Technologies',
       location: 'Bangalore, India',
-      period: 'March 2025 - Present',
+      period: 'March 2025 - Feb 2026',
       type: 'Full-time',
       description: 'Working on InstaSafe\'s ZTNA platform and SafeHats bug bounty system, improving secure access and vulnerability reporting features. Managing GitLab CI/CD pipelines and developing backend REST APIs.',
       achievements: [
@@ -25,11 +40,11 @@ const Experience = () => {
         'Developed backend REST APIs in Go for secure authentication',
       ],
       skills: ['Angular', 'Svelte', 'Go', 'GitLab CI/CD', 'Java (Android)'],
-      icon: Shield,
-      color: 'red',
+      icon: Code2,
+      color: 'blue',
     },
     {
-      id: 2,
+      id: 3,
       role: 'Full Stack Developer Intern',
       company: 'Appenius Private Limited',
       location: 'Remote',
