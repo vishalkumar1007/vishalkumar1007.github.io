@@ -1,160 +1,10 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ExternalLink, Github, TrendingUp, Share2, Layers, Code2, ArrowRight } from 'lucide-react';
+import { ExternalLink, Github, TrendingUp, Share2, ArrowRight } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
-
-const Projects = () => {
-  const sectionRef = useRef<HTMLElement>(null);
-  const headingRef = useRef<HTMLHeadingElement>(null);
-  const navigate = useNavigate();
-
-  const projects: Project[] = [
-    {
-      id: 1,
-      title: 'EquiGroww - Stock Trading Platform',
-      category: 'Full Stack MERN',
-      description: 'Built a MERN-based trading app with user authentication, Razorpay payment integration, and stock buy/sell features. Implemented secure login with JWT and email-based OTP.',
-      image: '/project-1.jpg',
-      tech: ['React.js', 'Redux Toolkit', 'Node.js', 'MongoDB', 'Razorpay'],
-      icon: TrendingUp,
-      stats: { features: '10+', stack: 'MERN' },
-      link: 'https://vishalkumar1007.github.io/Groww',
-      github: 'https://github.com/vishalkumar1007',
-      isCollection: false,
-    },
-    {
-      id: 2,
-      title: 'Share Multiverse',
-      category: 'Content Sharing Platform',
-      description: 'A real-world platform to share text and images via unique codes or QR. Features login-based history tracking, user signup, auto-login, and secure token-based authentication.',
-      image: '/project-2.jpg',
-      tech: ['React.js', 'Vite', 'Node.js', 'SQL', 'QR Code'],
-      icon: Share2,
-      stats: { auth: 'JWT', sharing: 'QR/Code' },
-      link: 'https://vishalkumar1007.github.io/share',
-      github: 'https://github.com/vishalkumar1007',
-      isCollection: false,
-    },
-    {
-      id: 3,
-      title: 'Portfolio Website',
-      category: 'Web Development',
-      description: 'Modern, responsive portfolio website built with React, TypeScript, and Tailwind CSS featuring GSAP animations and a sleek dark theme.',
-      image: '/project-3.jpg',
-      tech: ['React.js', 'TypeScript', 'Tailwind CSS', 'GSAP'],
-      icon: Code2,
-      stats: { responsive: 'Yes', animations: 'GSAP' },
-      link: 'https://vishalkumar07.me',
-      github: 'https://github.com/vishalkumar1007',
-      isCollection: false,
-    },
-    {
-      id: 4,
-      title: 'Full Stack Projects',
-      category: 'Various Applications',
-      description: 'Collection of projects including Groww Clone, URL Shortener, News App, Github User finder, and API preview tools showcasing MERN stack expertise.',
-      image: '/project-4.jpg',
-      tech: ['JavaScript', 'React.js', 'Node.js', 'MongoDB', 'Express.js'],
-      icon: Layers,
-      stats: { projects: '10+', skills: 'MERN' },
-      link: '/projects',
-      github: 'https://github.com/vishalkumar1007',
-      isCollection: true,
-    },
-  ];
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      // Heading animation
-      gsap.fromTo(
-        headingRef.current,
-        { y: 30, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: 'top 70%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-
-      // Project cards stagger animation
-      gsap.fromTo(
-        '.project-card',
-        { y: 60, opacity: 0 },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.8,
-          stagger: 0.15,
-          ease: 'power3.out',
-          scrollTrigger: {
-            trigger: '.projects-grid',
-            start: 'top 80%',
-            toggleActions: 'play none none none',
-          },
-        }
-      );
-    }, sectionRef);
-
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <section
-      id="projects"
-      ref={sectionRef}
-      className="relative py-24 lg:py-32 bg-black overflow-hidden"
-    >
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-red-950/5 via-black to-black" />
-      
-      {/* Grid Pattern */}
-      <div 
-        className="absolute inset-0 opacity-[0.02]"
-        style={{
-          backgroundImage: `
-            linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-          `,
-          backgroundSize: '80px 80px',
-        }}
-      />
-
-      <div className="w-full px-6 lg:px-12 max-w-7xl mx-auto relative">
-        {/* Header */}
-        <div ref={headingRef} className="text-center mb-16">
-          <div className="flex items-center justify-center gap-3 mb-4">
-            <div className="h-px w-12 bg-red-500" />
-            <span className="text-sm font-medium text-red-400 tracking-wider uppercase">Portfolio</span>
-            <div className="h-px w-12 bg-red-500" />
-          </div>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold font-['Montserrat'] mb-4">
-            MY <span className="text-gradient">PROJECTS</span>
-          </h2>
-          <p className="text-white/60 max-w-2xl mx-auto">
-            A showcase of full-stack applications, web platforms, 
-            and tools built to solve real-world problems.
-          </p>
-        </div>
-
-        {/* Projects Grid */}
-        <div className="projects-grid grid md:grid-cols-2 gap-6 lg:gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} onNavigate={() => navigate(project.link)} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
 
 interface ProjectStats {
   [key: string]: string | number;
@@ -165,115 +15,426 @@ interface Project {
   title: string;
   category: string;
   description: string;
-  image: string;
   tech: string[];
   icon: React.ElementType;
   stats: ProjectStats;
   link: string;
   github: string;
-  isCollection: boolean;
+  year: string;
+  number: string;
 }
 
-const ProjectCard = ({ project, onNavigate }: { project: Project; onNavigate: () => void }) => {
-  const Icon = project.icon;
-  
-  const handleClick = (e: React.MouseEvent) => {
-    if (project.isCollection) {
-      e.preventDefault();
-      onNavigate();
-    }
-  };
-  
+const projects: Project[] = [
+  {
+    id: 1,
+    title: 'EquiGroww',
+    category: 'Stock Trading Platform',
+    description:
+      'MERN-based trading app with user authentication, Razorpay payment integration, and stock buy/sell features. Secure login with JWT and email-based OTP.',
+    tech: ['React.js', 'Redux Toolkit', 'Node.js', 'MongoDB', 'Razorpay'],
+    icon: TrendingUp,
+    stats: { features: '10+', stack: 'MERN' },
+    link: 'https://vishalkumar1007.github.io/Groww',
+    github: 'https://github.com/vishalkumar1007',
+    year: '2024',
+    number: '01',
+  },
+  {
+    id: 2,
+    title: 'Learn',
+    category: 'My Learning Hub',
+    description:
+      'A personal learning dashboard built with React, Vite, and Node.js. Features JWT authentication, QR code sharing, and a curated list of resources for web development.',
+    tech: ['React.js', 'Vite', 'Node.js', 'MongoDB'],
+    icon: Share2,
+    stats: { Interesting: 'Visual Draw', stack: 'MERN' },
+    link: 'https://vishalkumar1007.github.io/learn',
+    github: 'https://github.com/vishalkumar1007/learn',
+    year: '2026',
+    number: '02',
+  },
+];
+
+// ─── Section ─────────────────────────────────────────────────────────────────
+const Projects = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo('.proj-header-line', { scaleX: 0 }, {
+        scaleX: 1, duration: 1, ease: 'expo.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
+      });
+      gsap.fromTo('.proj-main-title', { y: 60, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 1, ease: 'power4.out',
+        scrollTrigger: { trigger: sectionRef.current, start: 'top 70%' },
+      });
+      gsap.fromTo('.proj-card', { y: 80, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 0.9, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: '.proj-grid', start: 'top 80%' },
+      });
+      gsap.fromTo('.proj-gate', { y: 60, opacity: 0 }, {
+        y: 0, opacity: 1, duration: 1, ease: 'power3.out',
+        scrollTrigger: { trigger: '.proj-gate', start: 'top 88%' },
+      });
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div className="project-card group relative bg-gradient-to-br from-white/[0.03] to-transparent border border-white/10 rounded-2xl overflow-hidden hover:border-red-500/50 transition-all duration-500">
-      {/* Top Section with Icon */}
-      <div className="p-6 pb-4">
-        <div className="flex items-start justify-between mb-4">
-          {/* Icon & Category */}
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-xl bg-red-500/10 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
-              <Icon className="w-6 h-6 text-red-500" />
-            </div>
-            <div>
-              <span className="text-xs text-red-400 font-medium uppercase tracking-wider">
-                {project.category}
+    <section
+      id="projects"
+      ref={sectionRef}
+      className="relative py-28 lg:py-36 bg-[#080808] overflow-hidden"
+    >
+      {/* Noise */}
+      <div
+        className="absolute inset-0 opacity-[0.025] pointer-events-none"
+        style={{
+          backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E")`,
+          backgroundSize: '200px',
+        }}
+      />
+      {/* Glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-red-700/10 blur-[120px] rounded-full pointer-events-none" />
+
+      <div className="w-full px-6 lg:px-16 max-w-7xl mx-auto relative">
+
+        {/* Header */}
+        <div className="mb-20 overflow-hidden">
+          <div className="flex items-center gap-4 mb-6">
+            <span className="proj-header-line block h-px bg-red-500 origin-left" style={{ width: '48px' }} />
+            <span className="text-xs font-semibold tracking-[0.25em] uppercase text-red-500 font-mono">
+              Selected Work
+            </span>
+            <span className="text-xs text-white/20 font-mono ml-auto hidden sm:block">
+              2 of 10+ projects
+            </span>
+          </div>
+          <div className="proj-main-title">
+            <h2
+              className="text-[clamp(3rem,9vw,7.5rem)] font-black leading-[0.88] tracking-tight text-white"
+              style={{ fontFamily: "'Bebas Neue', 'Oswald', Impact, sans-serif" }}
+            >
+              MY{' '}
+              <span style={{ WebkitTextStroke: '2px #ef4444', color: 'transparent' }}>
+                PROJECTS
               </span>
-              <h3 className="text-lg font-bold font-['Montserrat'] text-white group-hover:text-red-400 transition-colors">
-                {project.title}
-              </h3>
-            </div>
+            </h2>
+            <p className="mt-5 text-white/40 text-base max-w-xl leading-relaxed">
+              Full-stack applications and web platforms — built to solve real problems
+              with clean code and sharp interfaces.
+            </p>
           </div>
         </div>
 
-        {/* Description */}
-        <p className="text-white/60 text-sm leading-relaxed mb-4">
-          {project.description}
-        </p>
-
-        {/* Stats */}
-        <div className="flex gap-4 mb-4">
-          {Object.entries(project.stats).map(([key, value]) => (
-            <div key={key} className="flex items-center gap-2">
-              <span className="text-lg font-bold text-red-400">{value}</span>
-              <span className="text-xs text-white/40 uppercase">{key}</span>
-            </div>
+        {/* 2 Cards */}
+        <div className="proj-grid grid md:grid-cols-2 gap-4 lg:gap-5 mb-5">
+          {projects.map((project) => (
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
 
-        {/* Tech Stack */}
-        <div className="flex flex-wrap gap-2 mb-4">
+        {/* Gate */}
+        <ProjectsGate onNavigate={() => navigate('/projects')} />
+      </div>
+    </section>
+  );
+};
+
+// ─── Card ─────────────────────────────────────────────────────────────────────
+const ProjectCard = ({ project }: { project: Project }) => {
+  const Icon = project.icon;
+  const cardRef = useRef<HTMLDivElement>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const card = cardRef.current;
+    if (!card) return;
+    const rect = card.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 6;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -6;
+    card.style.transform = `perspective(800px) rotateY(${x}deg) rotateX(${y}deg) translateZ(4px)`;
+  };
+  const handleMouseLeave = () => {
+    if (cardRef.current)
+      cardRef.current.style.transform = 'perspective(800px) rotateY(0deg) rotateX(0deg) translateZ(0px)';
+  };
+
+  return (
+    <div
+      ref={cardRef}
+      className="proj-card group relative flex flex-col rounded-2xl overflow-hidden border border-white/[0.07] bg-gradient-to-br from-white/[0.04] to-white/[0.01] hover:border-red-500/40"
+      style={{ transition: 'transform 0.2s ease, border-color 0.3s ease' }}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+    >
+      <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-white/[0.06]">
+        <div className="flex items-center gap-3">
+          <div className="w-9 h-9 rounded-lg bg-red-500/10 border border-red-500/20 flex items-center justify-center group-hover:bg-red-500/20 transition-colors">
+            <Icon className="w-4 h-4 text-red-400" />
+          </div>
+          <span className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/40 font-mono">
+            {project.category}
+          </span>
+        </div>
+        <span
+          className="text-4xl font-black text-white/[0.04] leading-none select-none group-hover:text-red-500/10 transition-colors"
+          style={{ fontFamily: "'Bebas Neue', Impact, sans-serif" }}
+        >
+          {project.number}
+        </span>
+      </div>
+
+      <div className="flex flex-col flex-1 p-6 gap-5">
+        <h3
+          className="text-2xl font-black text-white group-hover:text-red-400 transition-colors duration-300 leading-tight"
+          style={{  }}
+        >
+          {project.title}
+        </h3>
+        <p className="text-white/50 text-sm leading-relaxed flex-1">{project.description}</p>
+
+        <div className="flex gap-5">
+          {Object.entries(project.stats).map(([key, value]) => (
+            <div key={key} className="flex flex-col gap-0.5">
+              <span className="text-xl font-black text-red-400 leading-none" style={{ fontFamily: "'Bebas Neue', Impact, sans-serif" }}>{value}</span>
+              <span className="text-[10px] tracking-widest uppercase text-white/30 font-mono">{key}</span>
+            </div>
+          ))}
+          <div className="ml-auto flex flex-col gap-0.5 items-end">
+            <span className="text-xl font-black text-white/20 leading-none" style={{ fontFamily: "'Bebas Neue', Impact, sans-serif" }}>{project.year}</span>
+            <span className="text-[10px] tracking-widest uppercase text-white/20 font-mono">year</span>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-1.5">
           {project.tech.map((tech, i) => (
-            <span
-              key={i}
-              className="px-3 py-1 text-xs bg-white/5 border border-white/10 rounded-full text-white/70"
-            >
+            <span key={i} className="px-2.5 py-1 text-[10px] font-mono tracking-wide bg-white/[0.04] border border-white/[0.08] rounded-md text-white/50 group-hover:border-white/[0.14] transition-colors">
               {tech}
             </span>
           ))}
         </div>
 
-        {/* Action Buttons - Always Visible */}
-        <div className="flex gap-3">
-          {project.isCollection ? (
-            <button
-              onClick={handleClick}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-500 transition-all duration-300 hover:scale-[1.02]"
-              style={{ boxShadow: '0 0 20px rgba(239, 68, 68, 0.3)' }}
-            >
-              <span>View All Projects</span>
-              <ArrowRight className="w-4 h-4" />
-            </button>
-          ) : (
-            <>
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-red-600 text-white font-semibold rounded-xl hover:bg-red-500 transition-all duration-300 hover:scale-[1.02]"
-                style={{ boxShadow: '0 0 20px rgba(239, 68, 68, 0.3)' }}
-              >
-                <ExternalLink className="w-4 h-4" />
-                <span>Live Demo</span>
-              </a>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 px-4 py-3 bg-white/5 border border-white/20 text-white rounded-xl hover:border-white/40 hover:bg-white/10 transition-all duration-300"
-              >
-                <Github className="w-4 h-4" />
-                <span>Code</span>
-              </a>
-            </>
-          )}
+        <div className="flex gap-2.5 mt-1">
+          <a
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-1 flex items-center justify-center gap-2 px-4 py-2.5 bg-red-600 text-white text-sm font-bold rounded-xl hover:bg-red-500 active:scale-95 transition-all duration-200"
+            style={{ boxShadow: '0 0 24px rgba(239,68,68,0.25)' }}
+          >
+            <ExternalLink className="w-3.5 h-3.5" />
+            Live Demo
+          </a>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 px-4 py-2.5 bg-white/[0.04] border border-white/[0.12] text-white/70 text-sm font-semibold rounded-xl hover:bg-white/[0.08] hover:text-white hover:border-white/25 active:scale-95 transition-all duration-200"
+          >
+            <Github className="w-3.5 h-3.5" />
+            Code
+          </a>
         </div>
       </div>
 
-      {/* Bottom Accent Line */}
-      <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-red-600 to-red-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
-      
-      {/* Corner Glow on Hover */}
-      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-red-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-red-600 via-red-400 to-transparent scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+      <div className="absolute top-0 right-0 w-40 h-40 bg-red-500/5 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+    </div>
+  );
+};
+
+// ─── Gate ─────────────────────────────────────────────────────────────────────
+const ProjectsGate = ({ onNavigate }: { onNavigate: () => void }) => {
+  const [hovered, setHovered] = useState(false);
+  const gateRef = useRef<HTMLDivElement>(null);
+  const scanRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!scanRef.current) return;
+    gsap.fromTo(
+      scanRef.current,
+      { top: '-2px', opacity: 0 },
+      { top: '102%', opacity: 1, duration: 2.4, ease: 'none', repeat: -1, repeatDelay: 0.6 }
+    );
+  }, []);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const gate = gateRef.current;
+    if (!gate) return;
+    const rect = gate.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width - 0.5) * 10;
+    const y = ((e.clientY - rect.top) / rect.height - 0.5) * -5;
+    gsap.to(gate, { rotateY: x, rotateX: y, duration: 0.3, ease: 'power2.out' });
+  };
+
+  const handleMouseLeave = () => {
+    if (gateRef.current)
+      gsap.to(gateRef.current, { rotateY: 0, rotateX: 0, duration: 0.6, ease: 'power3.out' });
+    setHovered(false);
+  };
+
+  const previewProjects = ['URL Shortener', 'News App', 'GitHub Finder', 'Groww Clone', 'API Previewer'];
+
+  return (
+    <div className="proj-gate w-full">
+      {/* Divider */}
+      <div className="flex items-center gap-4 mb-4 px-1">
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
+        <span className="text-[10px] font-mono tracking-[0.3em] uppercase text-white/20">
+          there's more
+        </span>
+        <div className="h-px flex-1 bg-gradient-to-r from-transparent via-white/[0.08] to-transparent" />
+      </div>
+
+      {/* Gate */}
+      <div
+        ref={gateRef}
+        className="proj-gate relative w-full rounded-2xl overflow-hidden cursor-pointer select-none"
+        style={{
+          transformStyle: 'preserve-3d',
+          border: `1px solid ${hovered ? 'rgba(239,68,68,0.45)' : 'rgba(255,255,255,0.07)'}`,
+          background: hovered
+            ? 'linear-gradient(135deg, rgba(239,68,68,0.07) 0%, rgba(10,10,10,0.97) 55%)'
+            : 'linear-gradient(135deg, rgba(255,255,255,0.025) 0%, rgba(8,8,8,0.98) 100%)',
+          boxShadow: hovered ? '0 0 90px rgba(239,68,68,0.12), inset 0 0 50px rgba(239,68,68,0.03)' : 'none',
+          transition: 'border-color 0.4s ease, background 0.4s ease, box-shadow 0.4s ease',
+        }}
+        onClick={onNavigate}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
+        onMouseEnter={() => setHovered(true)}
+      >
+        {/* Scan line */}
+        <div
+          ref={scanRef}
+          className="absolute left-0 right-0 h-px pointer-events-none z-10"
+          style={{ background: 'linear-gradient(90deg, transparent 0%, rgba(239,68,68,0.7) 50%, transparent 100%)' }}
+        />
+
+        {/* Corner brackets */}
+        {[
+          'top-3 left-3 border-t border-l',
+          'top-3 right-3 border-t border-r',
+          'bottom-3 left-3 border-b border-l',
+          'bottom-3 right-3 border-b border-r',
+        ].map((cls, i) => (
+          <div
+            key={i}
+            className={`absolute w-5 h-5 ${cls} pointer-events-none transition-colors duration-400`}
+            style={{ borderColor: hovered ? 'rgba(239,68,68,0.6)' : 'rgba(255,255,255,0.1)' }}
+          />
+        ))}
+
+        {/* Dot grid */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-400"
+          style={{
+            backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.055) 1px, transparent 1px)',
+            backgroundSize: '28px 28px',
+            opacity: hovered ? 0.8 : 0.25,
+          }}
+        />
+
+        {/* Inner content */}
+        <div className="relative z-10 flex flex-col sm:flex-row items-center gap-8 px-8 sm:px-12 py-9 sm:py-10">
+
+          {/* Left — big ghost number */}
+          <div className="flex flex-col items-center sm:items-start shrink-0">
+            <span
+              className="text-[6rem] sm:text-[8rem] font-black leading-none transition-all duration-400"
+              style={{
+                fontFamily: "'Bebas Neue', Impact, sans-serif",
+                WebkitTextStroke: hovered ? '1.5px rgba(239,68,68,0.3)' : '1px rgba(255,255,255,0.06)',
+                color: 'transparent',
+              }}
+            >
+              10+
+            </span>
+            <span
+              className="text-[10px] font-mono tracking-[0.25em] uppercase transition-colors duration-300 -mt-2"
+              style={{ color: hovered ? 'rgba(239,68,68,0.55)' : 'rgba(255,255,255,0.18)' }}
+            >
+              projects inside
+            </span>
+          </div>
+
+          {/* Center — previews + label */}
+          <div className="flex flex-col gap-4 flex-1 items-center sm:items-start">
+            <p
+              className="text-[clamp(0.85rem,2vw,1rem)] font-black tracking-widest uppercase transition-colors duration-300"
+              style={{
+                fontFamily: "'Bebas Neue', 'Oswald', Impact, sans-serif",
+                color: hovered ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.3)',
+                letterSpacing: '0.12em',
+              }}
+            >
+              Full Stack Showcase
+            </p>
+
+            {/* Marquee-style pills */}
+            <div className="flex flex-wrap gap-2">
+              {previewProjects.map((name, i) => (
+                <span
+                  key={i}
+                  className="px-3 py-1 text-[10px] font-mono rounded-full border transition-all duration-300"
+                  style={{
+                    borderColor: hovered ? 'rgba(239,68,68,0.35)' : 'rgba(255,255,255,0.08)',
+                    color: hovered ? 'rgba(239,68,68,0.75)' : 'rgba(255,255,255,0.25)',
+                    background: hovered ? 'rgba(239,68,68,0.06)' : 'rgba(255,255,255,0.02)',
+                    transitionDelay: `${i * 30}ms`,
+                  }}
+                >
+                  {name}
+                </span>
+              ))}
+              <span
+                className="px-3 py-1 text-[10px] font-mono rounded-full border transition-all duration-300"
+                style={{
+                  borderColor: hovered ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.05)',
+                  color: hovered ? 'rgba(255,255,255,0.4)' : 'rgba(255,255,255,0.15)',
+                  transitionDelay: '150ms',
+                }}
+              >
+                + more
+              </span>
+            </div>
+          </div>
+
+          {/* Right — animated CTA */}
+          <div className="flex flex-col items-center gap-2 shrink-0">
+            <div
+              className="relative w-14 h-14 rounded-full border-2 flex items-center justify-center transition-all duration-300"
+              style={{
+                borderColor: hovered ? '#ef4444' : 'rgba(255,255,255,0.1)',
+                background: hovered ? 'rgba(239,68,68,0.12)' : 'transparent',
+                boxShadow: hovered ? '0 0 30px rgba(239,68,68,0.35)' : 'none',
+              }}
+            >
+              <ArrowRight
+                className="w-6 h-6 transition-all duration-300"
+                style={{
+                  color: hovered ? '#ef4444' : 'rgba(255,255,255,0.25)',
+                  transform: hovered ? 'translateX(2px)' : 'translateX(0)',
+                }}
+              />
+            </div>
+            <span
+              className="text-[9px] font-mono tracking-[0.2em] uppercase transition-colors duration-300 whitespace-nowrap"
+              style={{ color: hovered ? 'rgba(239,68,68,0.6)' : 'rgba(255,255,255,0.18)' }}
+            >
+              View All
+            </span>
+          </div>
+        </div>
+
+        {/* Bottom pulse line */}
+        <div
+          className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-red-500 to-transparent transition-opacity duration-500"
+          style={{ opacity: hovered ? 1 : 0 }}
+        />
+      </div>
     </div>
   );
 };

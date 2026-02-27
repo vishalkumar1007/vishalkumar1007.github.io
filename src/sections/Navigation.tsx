@@ -11,7 +11,7 @@ const Navigation = () => {
       setIsScrolled(window.scrollY > 50);
 
       // Determine active section
-      const sections = ['about', 'experience', 'projects', 'services', 'contact'];
+      const sections = ['about', 'experience', 'education', 'projects', 'achievements', 'contact'];
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {

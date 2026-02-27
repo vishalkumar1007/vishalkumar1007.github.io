@@ -49,7 +49,7 @@ const Achievements = () => {
 
   const highlights = [
     {
-      title: '150+ DSA Problems',
+      title: '100+ DSA Problems',
       description: 'Solved on LeetCode, GeeksforGeeks & more',
       icon: Code2,
       stat: 'Problem Solver',
@@ -58,7 +58,7 @@ const Achievements = () => {
       title: 'B.Tech Graduate',
       description: 'Electronics & Telecom Engineering',
       icon: GraduationCap,
-      stat: 'CGPA 7.8',
+      stat: 'CGPA 8.2',
     },
     {
       title: 'Open Source',

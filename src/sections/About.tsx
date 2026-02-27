@@ -146,6 +146,13 @@ const About = () => {
   const imageRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
 
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const ctx = gsap.context(() => {
       // Image reveal with 3D effect
@@ -297,10 +304,10 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Code2, value: '150+', label: 'DSA Problems Solved' },
+    { icon: Code2, value: '100+', label: 'DSA Problems Solved' },
     { icon: Server, value: '10+', label: 'Projects Built' },
-    { icon: Target, value: '7.8', label: 'CGPA' },
-    { icon: Shield, value: '2+', label: 'Years Experience' },
+    { icon: Target, value: '8.2', label: 'CGPA' },
+    { icon: Shield, value: '1+', label: 'Years Experience' },
   ];
 
   const skills = [
@@ -320,11 +327,21 @@ const About = () => {
     'UI/UX Implementation',
   ];
 
+  const DownloadMyCv = () => {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/file/d/1Qkv4cXghbpxTOmBcjl8Sn72WYWPas_sw/view?usp=sharing';
+    link.download = 'Vishal_Kumar_Resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="about"
       ref={sectionRef}
       className="relative py-20 lg:py-32 bg-black overflow-hidden"
+      
     >
       {/* Background Elements */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-black to-red-950/10" />
@@ -381,7 +398,7 @@ const About = () => {
               
               {/* Experience Badge */}
               <div className="absolute bottom-6 left-6 px-5 py-4 bg-black/90 backdrop-blur-sm border border-white/10 rounded-xl">
-                <p className="text-3xl lg:text-4xl font-bold text-red-500">2+</p>
+                <p className="text-3xl lg:text-4xl font-bold text-red-500">1+</p>
                 <p className="text-sm text-white/60">Years of Excellence</p>
               </div>
 
@@ -417,14 +434,14 @@ const About = () => {
 
             <div className="space-y-4">
               <p className="about-paragraph text-base lg:text-lg text-white/70 leading-relaxed">
-                Results-driven Full Stack Developer with <span className="text-red-400 font-semibold">2+ years</span> of experience 
+                Results-driven Full Stack Developer with <span className="text-red-400 font-semibold">1+ years</span> of experience 
                 building scalable MERN applications and secure enterprise products. Currently working as an 
                 Associate Software Developer at InstaSafe Technologies, contributing to ZTNA platform and cybersecurity solutions.
               </p>
               
               <p className="about-paragraph text-base lg:text-lg text-white/70 leading-relaxed">
                 Skilled in React.js, Node.js, and MongoDB, with additional expertise in GitLab CI/CD automation, 
-                Go scripting, and cybersecurity concepts. Focused on delivering secure, efficient, and user-centric solutions 
+                Go, and cybersecurity concepts. Focused on delivering secure, efficient, and user-centric solutions 
                 that solve real-world problems.
               </p>
             </div>
@@ -478,13 +495,14 @@ const About = () => {
             <div className="flex flex-wrap gap-4 pt-4">
               <button className="group inline-flex items-center gap-3 px-6 py-3 bg-red-600 text-white font-semibold rounded-full hover:bg-red-500 transition-all duration-300 hover:scale-105"
                 style={{ boxShadow: '0 0 20px rgba(239, 68, 68, 0.3)' }}
+                onClick={DownloadMyCv}
               >
                 <Download className="w-4 h-4" />
                 Download CV
               </button>
               
-              <button className="group inline-flex items-center gap-3 px-6 py-3 border border-white/20 text-white rounded-full hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300">
-                <Shield className="w-4 h-4 text-red-500" />
+              <button className="group inline-flex items-center gap-3 px-6 py-3 border border-white/20 text-white rounded-full hover:border-red-500/50 hover:bg-red-500/10 transition-all duration-300" onClick={() => scrollToSection("#achievements")}>
+                <Shield className="w-4 h-4 text-red-500"/>
                 View Certifications
               </button>
             </div>
