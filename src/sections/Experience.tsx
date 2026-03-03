@@ -13,7 +13,7 @@ const Experience = () => {
     {
       id: 1,
       role: 'Software Developer',
-      company: 'Inpiron Technologies',
+      company: 'InspironLabs Technologies',
       location: 'Bangalore, India',
       period: 'Feb 2026 - Present',
       type: 'Full-time',
