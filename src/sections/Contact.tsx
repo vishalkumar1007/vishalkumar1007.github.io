@@ -7,7 +7,7 @@ import { saveMessage } from '@/lib/firebase';
 gsap.registerPlugin(ScrollTrigger);
 
 const sendMail = async (email: string, name: string) => {
-  const mailApiUrl = "https://email-sender-api-five.vercel.app/api/sendMailFromVishalServer";
+  const mailApiUrl = "https://email-sender-api-git-main-vishal-kumars-projects-f9f018d1.vercel.app/api/sendMailFromVishalServer";
 
   const postData = {
     email: email,
