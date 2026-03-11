@@ -164,7 +164,7 @@ const Contact = () => {
 
   const contactInfo = [
     { icon: Mail, label: 'Email', value: 'vishalkumarnke93@gmail.com' },
-    { icon: Phone, label: 'Phone', value: '+91 6205594943' },
+    // { icon: Phone, label: 'Phone', value: '+91 6205594943' },
     { icon: MapPin, label: 'Location', value: 'Bengaluru, Karnataka, India' },
   ];
 
