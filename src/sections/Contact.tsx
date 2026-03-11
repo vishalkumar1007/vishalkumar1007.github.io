@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Phone, MapPin, Send, Twitter, Linkedin, Github, Globe, Check } from 'lucide-react';
+import { Mail, MapPin, Send, Twitter, Linkedin, Github, Globe, Check } from 'lucide-react';
 import { saveMessage } from '@/lib/firebase';
 
 gsap.registerPlugin(ScrollTrigger);
