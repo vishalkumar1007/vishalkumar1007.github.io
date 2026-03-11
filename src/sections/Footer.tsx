@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowUp, Send } from 'lucide-react';
+import { ArrowUp, Send, Users } from 'lucide-react';
+import { initVisitorTracking, subscribeToVisitCount } from '@/lib/firebase';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,17 @@ const Footer = () => {
   const footerRef = useRef<HTMLElement>(null);
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
+  const [visitorCount, setVisitorCount] = useState(0);
+
+  useEffect(() => {
+    initVisitorTracking();
+    
+    const unsubscribe = subscribeToVisitCount((count) => {
+      setVisitorCount(count);
+    });
+
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -191,9 +203,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="footer-bottom flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Vishal Kumar. All rights reserved.
-          </p>
+          <div className="flex items-center gap-6">
+            <p className="text-white/40 text-sm">
+              © {new Date().getFullYear()} Vishal Kumar. All rights reserved.
+            </p>
+            <div className="flex items-center gap-2 text-white/40 text-sm">
+              <Users className="w-4 h-4" />
+              <span>{visitorCount.toLocaleString()} visitors</span>
+            </div>
+          </div>
 
           {/* Back to Top */}
           <button
