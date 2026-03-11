@@ -21,9 +21,7 @@ function HomePage() {
   const mainRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Initialize scroll-triggered animations
     const ctx = gsap.context(() => {
-      // Reveal animations for sections
       gsap.utils.toArray<HTMLElement>('.reveal-section').forEach((section) => {
         gsap.fromTo(
           section,
@@ -42,7 +40,6 @@ function HomePage() {
         );
       });
 
-      // Parallax effect for floating elements
       gsap.utils.toArray<HTMLElement>('.parallax-element').forEach((el) => {
         const speed = el.dataset.speed || '0.5';
         gsap.to(el, {

@@ -2,8 +2,38 @@ import { useState, useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Mail, Phone, MapPin, Send, Twitter, Linkedin, Github, Globe, Check } from 'lucide-react';
+import { saveMessage } from '@/lib/firebase';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const sendMail = async (email: string, name: string) => {
+  const mailApiUrl = "https://email-sender-api-five.vercel.app/api/sendMailFromVishalServer";
+
+  const postData = {
+    email: email,
+    name: name
+  };
+
+  const options = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(postData),
+  };
+
+  try {
+    const response = await fetch(mailApiUrl, options);
+    const data = await response.json();
+    if (data.message == "Email successfully send" && data.success == true) {
+      console.log("mail send");
+    } else if (data.message == "Server error" && data.success == false) {
+      console.log("internal server error on email send");
+    }
+  } catch (error) {
+    console.error("Error sending mail:", error);
+  }
+};
 
 const Contact = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -110,11 +140,15 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    try {
+      await saveMessage(formData);
+      await sendMail(formData.email, formData.name);
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error('Error saving message:', error);
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
